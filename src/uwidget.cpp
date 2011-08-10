@@ -55,18 +55,50 @@ void uWidget::keyReleased(ofKeyEventArgs& e) {
 }
 
 void uWidget::mouseDragged(ofMouseEventArgs& e) {
+	uWidgetList::iterator it = children.begin();
+	ofPoint p(e.x, e.y);
+	while(it!=children.end()) {
+		if((*it)->inside(p)){
+			(*it)->mouseDragged(e);
+		};
+		++it;
+	}
 	mouseDragged(e.x, e.y, e.button);
 }
 
 void uWidget::mouseMoved(ofMouseEventArgs& e) {
+	uWidgetList::iterator it = children.begin();
+	ofPoint p(e.x, e.y);
+	while(it!=children.end()) {
+		if((*it)->inside(p)){
+			(*it)->mouseMoved(e);
+		};
+		++it;
+	}
 	mouseMoved(e.x, e.y);
 }
 
 void uWidget::mousePressed(ofMouseEventArgs& e) {
+	uWidgetList::iterator it = children.begin();
+	ofPoint p(e.x, e.y);
+	while(it!=children.end()) {
+		if((*it)->inside(p)){
+			(*it)->mousePressed(e);
+		};
+		++it;
+	}
 	mousePressed(e.x, e.y, e.button);
 }
 
 void uWidget::mouseReleased(ofMouseEventArgs& e) {
+	uWidgetList::iterator it = children.begin();
+	ofPoint p(e.x, e.y);
+	while(it!=children.end()) {
+		if((*it)->inside(p)){
+			(*it)->mouseReleased(e);
+		};
+		++it;
+	}
 	mouseReleased(e.x, e.y, e.button);
 }
 

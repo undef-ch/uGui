@@ -10,6 +10,16 @@ public:
 		ret.backgroundColor.set(120);
 	}
 
+	static uStyle getActive(){
+		uStyle ret;
+		ret.backgroundColor.set(120);
+	}
+
+	static uStyle getFocus(){
+		uStyle ret;
+		ret.backgroundColor.set(120);
+	}
+
 	uStyle();
 	~uStyle();
 	ofColor backgroundColor;

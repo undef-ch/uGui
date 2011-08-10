@@ -16,6 +16,9 @@ public:
 
 private:
 	bool editing;
+	string text;
+	int blinkerCount;
+	bool showBlinker;
 };
 
 #endif // UTEXTEDIT_H

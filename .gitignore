@@ -1,0 +1,7 @@
+*.so
+*.d
+*.o
+*.session
+*.tags
+*.swp
+*.mk

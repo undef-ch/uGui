@@ -1,28 +1,35 @@
 #include "utextedit.h"
 
-uTextEdit::uTextEdit()
-{
-	width = 100;
-	height = 20;
+uTextEdit::uTextEdit() {
+	width = 200;
+	height = 80;
 }
 
-uTextEdit::~uTextEdit()
-{
+uTextEdit::~uTextEdit() {
 }
 
-void uTextEdit::draw()
-{
+void uTextEdit::draw() {
 	ofRect(x, y, width, height);
+	if(!editing)
+		return;
+	blinkerCount++;
+	if(blinkerCount>20){
+		showBlinker=!showBlinker;
+		blinkerCount=0;
+	}
+
+	ofPoint blinkerPos;
 }
-void uTextEdit::keyPressed(int key)
-{
+void uTextEdit::keyPressed(int key) {
+	text += char(key);
 }
 
-void uTextEdit::mousePressed(int x, int y, int button)
-{
+void uTextEdit::mousePressed(int x, int y, int button) {
+	blinkerCount = 0;
+	editing = !editing;
+	showBlinker = true;
 }
 
-void uTextEdit::mouseReleased(int x, int y, int button)
-{
-}
+void uTextEdit::mouseReleased(int x, int y, int button) {
 
+}
