@@ -7,11 +7,10 @@ void exampleApp::setup(){
 	ofSetFrameRate(60);
 
 	gui.registerOfEvents();
-
+	gui.setPosition(100, 100);
+	
 	uTextEdit* tEdit = new uTextEdit();
 	gui.addChild(tEdit);
-	gui.x = 100;
-	gui.y = 100;
 }
 
 //--------------------------------------------------------------

@@ -275,8 +275,10 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
-									<integer>11</integer>
+									<integer>9</integer>
+									<integer>3</integer>
+									<integer>2</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -318,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>main.cpp</string>
+								<string>uwidget.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,15 +328,21 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>main.cpp</string>
+										<string>uwidget.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FAFFA24513F33A3E00150724</string>
+										<string>FAFFA31813F34B6C00150724</string>
 										<key>history</key>
 										<array>
 											<string>FAFFA23613F339B300150724</string>
-											<string>FAFFA23713F339B300150724</string>
+											<string>FAFFA28813F345E500150724</string>
+											<string>FAFFA2C413F348E300150724</string>
+											<string>FAFFA2D613F3495900150724</string>
+											<string>FAFFA2FF13F34A4200150724</string>
+											<string>FAFFA31413F34B5F00150724</string>
+											<string>FAFFA31513F34B5F00150724</string>
+											<string>FAFFA2FD13F34A4200150724</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -561,7 +569,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>exampleApp.h</string>
+								<string>uwidget.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -874,6 +882,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

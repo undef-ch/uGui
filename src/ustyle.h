@@ -3,23 +3,39 @@
 
 #include "ofMain.h"
 
+class uDistances{
+public:
+	void set(float val){
+		top = left = bottom = right = val;
+	}
+	float top;
+	float left;
+	float bottom;
+	float right;
+};
+
 class uStyle {
 public:
 	static uStyle getDefault(){
 		uStyle ret;
-		ret.backgroundColor.set(120);
-		return ret;
-	}
-
-	static uStyle getActive(){
-		uStyle ret;
-		ret.backgroundColor.set(120);
+		ret.drawBorder = false;
+		ret.colorBackground.set(120);
+		ret.colorForeground.set(30);
+		ret.padding.set(5);
 		return ret;
 	}
 
 	static uStyle getFocus(){
-		uStyle ret;
-		ret.backgroundColor.set(120);
+		uStyle ret = getDefault();
+		ret.colorBackground.set(120);
+		ret.drawBorder = true;
+		ret.colorBorder.set(0);
+		return ret;
+	}
+
+	static uStyle getTrigger(){
+		uStyle ret = getDefault();
+		ret.colorBackground.set(120);
 		return ret;
 	}
 
@@ -31,10 +47,12 @@ public:
 
 	uStyle();
 	~uStyle();
-	ofColor backgroundColor;
-	ofColor foregroundColor;
-	ofColor borderColor;
-	bool hasBorder;
+	ofColor colorBackground;
+	ofColor colorForeground;
+	ofColor colorBorder;
+	bool drawBorder;
+	uDistances padding;
+	uDistances margin;
 };
 
 #endif // USTYLE_H

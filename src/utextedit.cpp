@@ -2,8 +2,7 @@
 #include "utextedit.h"
 
 uTextEdit::uTextEdit():uWidget(),editing(false) {
-	width = 200;
-	height = 80;
+	setSize(300, 100);
 
 	font = uStyle::getFont();
 }
@@ -12,9 +11,12 @@ uTextEdit::~uTextEdit() {
 }
 
 void uTextEdit::draw() {
-	ofSetColor(255);
-	ofRect(x, y, width, height);
-	ofSetColor(120);
+	drawBackground();
+
+	ofPushMatrix();
+	ofTranslate(innerBounds.x, innerBounds.y);
+	
+	ofSetColor(styleCurrent.colorForeground);
 	font->drawString(text, 0, font->getSize());
 
 	if(!editing)
@@ -31,6 +33,7 @@ void uTextEdit::draw() {
 			blinkerPos.x += font->stringWidth("s");
 		ofLine(blinkerPos.x, blinkerPos.y+3, blinkerPos.x, blinkerPos.y+font->getSize());
 	}
+	ofPopMatrix();
 }
 void uTextEdit::keyPressed(int key) {
 	if(!editing)

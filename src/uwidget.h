@@ -2,13 +2,14 @@
 #define UWIDGET_H
 
 #include "ofMain.h"
+#include "ustyle.h" 
 
 class uWidget;
 
 typedef ofPtr<uWidget> uWidgetPtr;
 typedef std::vector<uWidgetPtr> uWidgetList;
 
-class uWidget: public ofRectangle{
+class uWidget: private ofRectangle{
 
 public:
 	uWidget();
@@ -25,11 +26,14 @@ public:
 
 	virtual void onFocus(){};
 	virtual void onUnfocus(){};
-	virtual void onReparent(){};
+	virtual void onSetParent(){};
 
 	virtual void update(){};
 	virtual void draw(){};
-
+	
+	virtual void onSizeChange(ofPoint newSize, ofPoint oldSize){};
+	virtual void onPositionChange(ofPoint newPosition, ofPoint oldPosition){};
+	
 	// CORE FUNCTIONALITY
 	void update(ofEventArgs& e);
 	void draw(ofEventArgs& e);
@@ -49,10 +53,28 @@ public:
 	uWidget* getParent();
 
 	void setFocus();
+	void unsetFocus();
 
 	void registerOfEvents();
 	void unregisterOfEvents();
+	
+	ofPoint getSize();
+	void setSize(int w, int h);
+	
+	void setPosition(float x, float y);
+	ofPoint getPosition();
+	
+	
+	void drawBackground();
+	
+	uStyle styleDefault;
+	uStyle styleFocus;
+	uStyle styleTrigger;
+	uStyle styleCurrent;
 
+protected:
+	ofRectangle innerBounds;
+	
 private:
 	uWidget* parent;
 

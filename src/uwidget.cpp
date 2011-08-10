@@ -1,6 +1,8 @@
 #include "uwidget.h"
 
-uWidget::uWidget():registeredToOf(false) {
+uWidget::uWidget():registeredToOf(false), styleDefault(uStyle::getDefault()), styleFocus(uStyle::getFocus()), styleTrigger(uStyle::getTrigger()) {
+	styleCurrent=styleDefault;
+	setSize(100, 100);
 }
 
 uWidget::~uWidget() {
@@ -11,8 +13,8 @@ void uWidget::addChild(uWidget* uw) {
 }
 
 void uWidget::addChild(uWidgetPtr uw) {
-	uw->setParent(this);
 	children.push_back(uw);
+	uw->setParent(this);
 }
 
 void uWidget::update(ofEventArgs& e) {
@@ -124,6 +126,7 @@ uWidget* uWidget::getParent() {
 
 void uWidget::setParent(uWidget* p) {
 	parent = p;
+	onSetParent();
 }
 
 
@@ -154,4 +157,45 @@ void uWidget::unregisterOfEvents() {
 }
 
 void uWidget::setFocus() {
+	styleCurrent = styleFocus;
+}
+
+void uWidget::unsetFocus(){
+	styleCurrent = styleDefault;
+}
+
+void uWidget::setSize(int w, int h){
+	ofPoint oldSize(width, height);
+	width = w;
+	height = h;
+	onSizeChange(getSize(), oldSize);
+}
+
+ofPoint uWidget::getSize(){
+	innerBounds.set(styleCurrent.padding.left, styleCurrent.padding.top,
+					width - styleCurrent.padding.left - styleCurrent.padding.right, height - styleCurrent.padding.top - styleCurrent.padding.bottom);
+	return ofPoint(width, height);
+}
+
+void uWidget::drawBackground(){
+	ofSetColor(styleCurrent.colorBackground);
+	ofSetColor(255);
+	ofFill();
+	ofRect(0, 0, getSize().x, getSize().y);
+	if(styleCurrent.drawBorder){
+		ofNoFill();
+		ofSetColor(styleCurrent.colorBorder);
+		ofRect(0, 0, getSize().x, getSize().y);
+	}
+}
+
+void uWidget::setPosition(float _x, float _y){
+	ofPoint oldPosition(x, y);
+	x = _x;
+	y = _y;
+	onPositionChange(getPosition(), oldPosition);
+}
+
+ofPoint uWidget::getPosition(){
+	return ofPoint(x, y);
 }
