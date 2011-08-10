@@ -8,16 +8,25 @@ public:
 	static uStyle getDefault(){
 		uStyle ret;
 		ret.backgroundColor.set(120);
+		return ret;
 	}
 
 	static uStyle getActive(){
 		uStyle ret;
 		ret.backgroundColor.set(120);
+		return ret;
 	}
 
 	static uStyle getFocus(){
 		uStyle ret;
 		ret.backgroundColor.set(120);
+		return ret;
+	}
+
+	static ofTrueTypeFont* getFont(){
+		ofTrueTypeFont* ret = new ofTrueTypeFont(); //TODO should be shared pointer to know when to delete font...
+		ret->loadFont("helvetica.ttf", 12);
+		return ret;
 	}
 
 	uStyle();

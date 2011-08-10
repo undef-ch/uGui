@@ -19,6 +19,7 @@ private:
 	string text;
 	int blinkerCount;
 	bool showBlinker;
+	ofTrueTypeFont* font;
 };
 
 #endif // UTEXTEDIT_H

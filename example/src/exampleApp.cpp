@@ -6,6 +6,11 @@ void exampleApp::setup(){
 	ofBackground(0,0,0);
 
 	gui.registerOfEvents();
+
+	uTextEdit* tEdit = new uTextEdit();
+	gui.addChild(tEdit);
+	gui.x = 100;
+	gui.y = 100;
 }
 
 //--------------------------------------------------------------

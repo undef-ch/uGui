@@ -5,3 +5,4 @@
 *.tags
 *.swp
 *.mk
+bin/example

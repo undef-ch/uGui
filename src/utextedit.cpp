@@ -1,8 +1,11 @@
+#include "ustyle.h"
 #include "utextedit.h"
 
 uTextEdit::uTextEdit() {
 	width = 200;
 	height = 80;
+
+	font = uStyle::getFont();
 }
 
 uTextEdit::~uTextEdit() {
