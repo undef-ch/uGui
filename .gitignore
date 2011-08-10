@@ -6,3 +6,5 @@
 *.swp
 *.mk
 example/bin/example
+*.app
+*.build

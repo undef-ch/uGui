@@ -1,0 +1,216 @@
+// !$*UTF8*$!
+{
+	E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = FAFFA20C13F336F100150724 /* emptyExample */;
+		activeSDKPreference = macosx10.6;
+		activeTarget = E4B69B5A0A3A1756003C02F2 /* emptyExample */;
+		addToTargets = (
+			E4B69B5A0A3A1756003C02F2 /* emptyExample */,
+		);
+		codeSenseManager = FAFFA21413F336FA00150724 /* Code sense */;
+		executables = (
+			FAFFA20C13F336F100150724 /* emptyExample */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					993,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 334706417;
+			PBXWorkspaceStateSaveDate = 334706417;
+		};
+		perUserProjectItems = {
+			FAFFA21A13F338CE00150724 /* XCBuildMessageTextBookmark */ = FAFFA21A13F338CE00150724 /* XCBuildMessageTextBookmark */;
+			FAFFA21C13F338CE00150724 /* PBXTextBookmark */ = FAFFA21C13F338CE00150724 /* PBXTextBookmark */;
+			FAFFA21E13F338D000150724 /* XCBuildMessageTextBookmark */ = FAFFA21E13F338D000150724 /* XCBuildMessageTextBookmark */;
+			FAFFA22013F338D000150724 /* PBXTextBookmark */ = FAFFA22013F338D000150724 /* PBXTextBookmark */;
+			FAFFA23013F3399F00150724 /* PBXTextBookmark */ = FAFFA23013F3399F00150724 /* PBXTextBookmark */;
+			FAFFA23613F339B300150724 /* PBXTextBookmark */ = FAFFA23613F339B300150724 /* PBXTextBookmark */;
+			FAFFA23713F339B300150724 /* PBXBookmark */ = FAFFA23713F339B300150724 /* PBXBookmark */;
+			FAFFA23813F339B300150724 /* PBXTextBookmark */ = FAFFA23813F339B300150724 /* PBXTextBookmark */;
+		};
+		sourceControlManager = FAFFA21313F336FA00150724 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	E4B69B5A0A3A1756003C02F2 /* emptyExample */ = {
+		activeExec = 0;
+		executables = (
+			FAFFA20C13F336F100150724 /* emptyExample */,
+		);
+	};
+	E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 734}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 420}";
+		};
+	};
+	FAFFA20C13F336F100150724 /* emptyExample */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = emptyExample;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	FAFFA21313F336FA00150724 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	FAFFA21413F336FA00150724 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	FAFFA21A13F338CE00150724 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "UGui.h: No such file or directory";
+		fRef = FAFFA21B13F338CE00150724 /* exampleApp.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 3;
+		rType = 1;
+	};
+	FAFFA21B13F338CE00150724 /* exampleApp.h */ = {
+		isa = PBXFileReference;
+		name = exampleApp.h;
+		path = /Users/phwhitfield/Documents/programming/openFrameworks/addons/uGui/example/src/exampleApp.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 734}}";
+			sepNavSelRange = "{34, 0}";
+			sepNavVisRange = "{0, 512}";
+		};
+	};
+	FAFFA21C13F338CE00150724 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA21D13F338CE00150724 /* exampleApp.h */;
+		name = "exampleApp.h: 4";
+		rLen = 0;
+		rLoc = 34;
+		rType = 0;
+		vrLen = 242;
+		vrLoc = 0;
+	};
+	FAFFA21D13F338CE00150724 /* exampleApp.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = exampleApp.h;
+		path = /Users/phwhitfield/Documents/programming/openFrameworks/addons/uGui/example/src/exampleApp.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 734}}";
+			sepNavSelRange = "{508, 0}";
+			sepNavVisRange = "{0, 512}";
+		};
+	};
+	FAFFA21E13F338D000150724 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "UGui.h: No such file or directory";
+		fRef = FAFFA21F13F338D000150724 /* exampleApp.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 3;
+		rType = 1;
+	};
+	FAFFA21F13F338D000150724 /* exampleApp.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = exampleApp.h;
+		path = /Users/phwhitfield/Documents/programming/openFrameworks/addons/uGui/example/src/exampleApp.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1032, 338}}";
+			sepNavSelRange = "{34, 0}";
+			sepNavVisRange = "{0, 512}";
+		};
+	};
+	FAFFA22013F338D000150724 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA21B13F338CE00150724 /* exampleApp.h */;
+		name = "exampleApp.h: 4";
+		rLen = 0;
+		rLoc = 34;
+		rType = 0;
+		vrLen = 512;
+		vrLoc = 0;
+	};
+	FAFFA23013F3399F00150724 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA21F13F338D000150724 /* exampleApp.h */;
+		name = "exampleApp.h: 4";
+		rLen = 0;
+		rLoc = 34;
+		rType = 0;
+		vrLen = 512;
+		vrLoc = 0;
+	};
+	FAFFA23613F339B300150724 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA21D13F338CE00150724 /* exampleApp.h */;
+		name = "exampleApp.h: 23";
+		rLen = 0;
+		rLoc = 508;
+		rType = 0;
+		vrLen = 512;
+		vrLoc = 0;
+	};
+	FAFFA23713F339B300150724 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */;
+	};
+	FAFFA23813F339B300150724 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */;
+		name = "main.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 0;
+	};
+}
