@@ -4,6 +4,7 @@
 void exampleApp::setup(){
 	ofSetWindowTitle("exampleApp");
 	ofBackground(0,0,0);
+	ofSetFrameRate(60);
 
 	gui.registerOfEvents();
 

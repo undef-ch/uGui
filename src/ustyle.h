@@ -25,7 +25,7 @@ public:
 
 	static ofTrueTypeFont* getFont(){
 		ofTrueTypeFont* ret = new ofTrueTypeFont(); //TODO should be shared pointer to know when to delete font...
-		ret->loadFont("helvetica.ttf", 12);
+		ret->loadFont("asenine.ttf", 12);
 		return ret;
 	}
 

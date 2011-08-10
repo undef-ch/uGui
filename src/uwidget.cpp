@@ -1,6 +1,6 @@
 #include "uwidget.h"
 
-uWidget::uWidget() {
+uWidget::uWidget():registeredToOf(false) {
 }
 
 uWidget::~uWidget() {
@@ -55,6 +55,10 @@ void uWidget::keyReleased(ofKeyEventArgs& e) {
 }
 
 void uWidget::mouseDragged(ofMouseEventArgs& e) {
+	if(registeredToOf){
+		e.x-=x;
+		e.y-=y;
+	}
 	uWidgetList::iterator it = children.begin();
 	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
@@ -67,6 +71,10 @@ void uWidget::mouseDragged(ofMouseEventArgs& e) {
 }
 
 void uWidget::mouseMoved(ofMouseEventArgs& e) {
+	if(registeredToOf){
+		e.x-=x;
+		e.y-=y;
+	}
 	uWidgetList::iterator it = children.begin();
 	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
@@ -79,6 +87,10 @@ void uWidget::mouseMoved(ofMouseEventArgs& e) {
 }
 
 void uWidget::mousePressed(ofMouseEventArgs& e) {
+	if(registeredToOf){
+		e.x-=x;
+		e.y-=y;
+	}
 	uWidgetList::iterator it = children.begin();
 	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
@@ -91,6 +103,10 @@ void uWidget::mousePressed(ofMouseEventArgs& e) {
 }
 
 void uWidget::mouseReleased(ofMouseEventArgs& e) {
+	if(registeredToOf){
+		e.x-=x;
+		e.y-=y;
+	}
 	uWidgetList::iterator it = children.begin();
 	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
@@ -112,6 +128,7 @@ void uWidget::setParent(uWidget* p) {
 
 
 void uWidget::registerOfEvents() {
+	registeredToOf = true;
 	ofAddListener(ofEvents.mouseMoved, this, &uWidget::mouseMoved);
 	ofAddListener(ofEvents.mousePressed, this, &uWidget::mousePressed);
 	ofAddListener(ofEvents.mouseReleased, this, &uWidget::mouseReleased);
@@ -124,12 +141,16 @@ void uWidget::registerOfEvents() {
 }
 
 void uWidget::unregisterOfEvents() {
+	registeredToOf = false;
 	ofRemoveListener(ofEvents.mouseMoved, this, &uWidget::mouseMoved);
 	ofRemoveListener(ofEvents.mousePressed, this, &uWidget::mousePressed);
 	ofRemoveListener(ofEvents.mouseReleased, this, &uWidget::mouseReleased);
 	ofRemoveListener(ofEvents.mouseDragged, this, &uWidget::mouseDragged);
 	ofRemoveListener(ofEvents.keyPressed, this, &uWidget::keyPressed);
 	ofRemoveListener(ofEvents.keyReleased, this, &uWidget::keyReleased);
+
+	ofRemoveListener(ofEvents.update, this, &uWidget::update);
+	ofRemoveListener(ofEvents.draw, this, &uWidget::draw);
 }
 
 void uWidget::setFocus() {

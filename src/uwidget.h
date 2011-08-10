@@ -57,6 +57,7 @@ private:
 	uWidget* parent;
 
 	uWidgetList children;
+	bool registeredToOf;
 };
 
 #endif // UWIDGET_H
