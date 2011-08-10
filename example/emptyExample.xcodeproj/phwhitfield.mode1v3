@@ -230,8 +230,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -313,6 +311,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FAFFA23813F339B300150724</string>
+										<string>FAFFA24513F33A3E00150724</string>
 										<key>history</key>
 										<array>
 											<string>FAFFA23613F339B300150724</string>
@@ -532,6 +532,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>FAFFA24313F33A3500150724</string>
+		<string>FAFFA24413F33A3500150724</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FA13A21313271D5700F0666B</string>
 		<string>/Users/phwhitfield/Documents/programming/openFrameworks/addons/uGui/example/emptyExample.xcodeproj</string>
 	</array>
@@ -659,8 +663,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 185}}</string>
-											<string>{{316, 0}, {378, 185}}</string>
+											<string>{{0, 0}, {316, 194}}</string>
+											<string>{{316, 0}, {378, 194}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -675,8 +679,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 185}}</string>
-											<string>{{0, 185}, {694, 196}}</string>
+											<string>{{0, 0}, {694, 194}}</string>
+											<string>{{0, 194}, {694, 187}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -709,7 +713,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 185}}</string>
+									<string>{{316, 0}, {378, 194}}</string>
 									<key>RubberWindowFrame</key>
 									<string>347 356 694 422 0 0 1440 878 </string>
 								</dict>
@@ -737,13 +741,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>FA13A21513271D5700F0666B</string>
+				<string>FAFFA23C13F33A3500150724</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>FA13A21613271D5700F0666B</string>
-				<string>FA13A21713271D5700F0666B</string>
-				<string>FA13A21813271D5700F0666B</string>
-				<string>FA13A21913271D5700F0666B</string>
-				<string>FA13A21A13271D5700F0666B</string>
+				<string>FAFFA23D13F33A3500150724</string>
+				<string>FAFFA23E13F33A3500150724</string>
+				<string>FAFFA23F13F33A3500150724</string>
+				<string>FAFFA24013F33A3500150724</string>
+				<string>FAFFA24113F33A3500150724</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -905,7 +909,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>FA13A21B13271D5700F0666B</string>
+				<string>FAFFA24213F33A3500150724</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

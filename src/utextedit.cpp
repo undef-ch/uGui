@@ -37,9 +37,11 @@ void uTextEdit::keyPressed(int key) {
 		return;
 	if(key == OF_KEY_BACKSPACE) {
 		text = text.substr(0, text.length() - 1);
-		return;
+	}else if(key == OF_KEY_RETURN){
+		text += "\n";
+	}else{
+		text += char(key);
 	}
-	text += char(key);
 }
 
 void uTextEdit::mousePressed(int x, int y, int button) {
