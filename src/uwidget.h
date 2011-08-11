@@ -9,7 +9,7 @@ class uWidget;
 typedef ofPtr<uWidget> uWidgetPtr;
 typedef std::vector<uWidgetPtr> uWidgetList;
 
-class uWidget: private ofRectangle{
+class uWidget: protected ofRectangle{
 
 public:
 	uWidget();

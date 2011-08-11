@@ -9,12 +9,17 @@ public:
 	uTextEdit();
 	~uTextEdit();
 
+	void setText(string text);
+	string getText();
+	
 	void draw();
 	void mousePressed(int x, int y, int button);
 	void mouseReleased(int x, int y, int button);
 	void keyPressed(int key);
-
+	
 private:
+	void updateLineBreaks();
+	
 	bool editing;
 	string text;
 	int blinkerCount;

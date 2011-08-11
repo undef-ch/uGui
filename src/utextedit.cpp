@@ -3,16 +3,26 @@
 
 uTextEdit::uTextEdit():uWidget(),editing(false) {
 	setSize(300, 100);
-
 	font = uStyle::getFont();
+	setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
+	setText(getText()+" Und hier noch was dazu, damit es einen fehler gibt");
 }
 
 uTextEdit::~uTextEdit() {
 }
 
+void uTextEdit::setText(string t){
+	text = t;
+	updateLineBreaks();
+}
+
+string uTextEdit::getText(){
+	return text;
+}
+
 void uTextEdit::draw() {
 	drawBackground();
-
+	
 	ofPushMatrix();
 	ofTranslate(innerBounds.x, innerBounds.y);
 	
@@ -28,13 +38,21 @@ void uTextEdit::draw() {
 	}
 	if(showBlinker) {
 		ofPoint blinkerPos;
-		blinkerPos.x = font->stringWidth(text)+2;
+		blinkerPos.y = font->getStringBoundingBox(text, 0, 0).height;
+		
+		int brPos = text.find_last_of("\n");
+		if(brPos != -1)
+			blinkerPos.x = font->stringWidth(text.substr(brPos, text.size()-brPos))+2;
+		else
+			blinkerPos.x = font->stringWidth(text)+2;
+		
 		if(text.length()>1 && text[text.length()-1] == ' ')
 			blinkerPos.x += font->stringWidth("s");
-		ofLine(blinkerPos.x, blinkerPos.y+3, blinkerPos.x, blinkerPos.y+font->getSize());
+		ofRect(blinkerPos.x, blinkerPos.y-font->getSize()+3, 2, font->getSize()-3);
 	}
 	ofPopMatrix();
 }
+
 void uTextEdit::keyPressed(int key) {
 	if(!editing)
 		return;
@@ -44,6 +62,40 @@ void uTextEdit::keyPressed(int key) {
 		text += "\n";
 	}else{
 		text += char(key);
+	}
+	updateLineBreaks();
+}
+
+void uTextEdit::updateLineBreaks(){
+	//update line breaks
+	ofRectangle bounds = font->getStringBoundingBox(text, 0, 0);
+	if(bounds.width > innerBounds.width){
+		//too big, do automatic line breaking
+		vector<string> words = ofSplitString(text, " ", true, true);
+		vector<string>::iterator it = words.begin();
+		string curStr;
+		int curPos=0;
+		int curW=0;
+		int spaceWidth = font->stringWidth("_");
+		text.clear();
+		while (it != words.end()) {
+			curStr = (*it);
+			
+			if(curStr.size() > 1 && curStr[curStr.size()-1] == '\n'){
+				curW = 0;
+			}
+			
+			int strW = font->stringWidth(curStr);
+			if (curW+strW > innerBounds.width) {
+				text += "\n";
+				curW = 0;
+			}
+			text += curStr + " ";
+			curW += strW;
+			curW += spaceWidth;
+			curPos += curStr.size()+1;
+			++it;
+		}
 	}
 }
 
