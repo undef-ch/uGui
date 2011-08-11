@@ -12,6 +12,8 @@
 
 class uWidget;
 
+#include "ofMain.h"
+
 typedef ofPtr<uWidget> uWidgetPtr;
 typedef std::vector<uWidgetPtr> uWidgetList;
 
@@ -46,8 +48,24 @@ typedef uList<int> uModifierKeysList;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class uFocusHandler{
+class uFocus{
+public:
+	virtual void onFocus(){};
+	virtual void onUnfocus(){};
 	
+	virtual void setFocused(){onFocus();};
+	virtual void setUnfocused(){onUnfocus();};
+};
+
+class uFocusHandler{
+public:
+	uFocusHandler():focused(NULL){}
+	void setFocused(uFocus* f);
+	void setUnfocused();
+	bool hasFocused();
+private:
+	uFocus* focused;
 };
 
 #endif
+

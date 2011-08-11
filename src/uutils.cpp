@@ -1,0 +1,1 @@
+#include "uutils.h"bool uFocusHandler::hasFocused(){	return !(focused == NULL);}void uFocusHandler::setFocused(uFocus* f){	if(hasFocused() && focused != f)		focused->setUnfocused();	focused = f;}void uFocusHandler::setUnfocused(){	if(hasFocused())		focused->setUnfocused();	focused = NULL;}

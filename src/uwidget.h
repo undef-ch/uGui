@@ -5,7 +5,7 @@
 #include "ustyle.h" 
 #include "uutils.h"
 
-class uWidget: protected ofRectangle{
+class uWidget: protected ofRectangle, public uFocus{
 
 public:
 	uWidget();
@@ -21,8 +21,6 @@ public:
 	virtual void mousePressed( int x, int y, int button ) {}
 	virtual void mouseReleased(int x, int y, int button ) {}
 
-	virtual void onFocus(){};
-	virtual void onUnfocus(){};
 	virtual void onSetParent(){};
 
 	virtual void update(){};
@@ -49,9 +47,6 @@ public:
 	void setParent(uWidget* parent);
 	uWidget* getParent();
 
-	void setFocus();
-	void unsetFocus();
-
 	void registerOfEvents();
 	void unregisterOfEvents();
 	
@@ -68,9 +63,15 @@ public:
 	uStyle styleFocus;
 	uStyle styleTrigger;
 	uStyle styleCurrent;
+	
+	void setFocused();
+	void setUnfocused();
+	
+	uWidget* getUltimateParent();
 
 protected:
 	ofRectangle innerBounds;
+	static uFocusHandler focusHandler ;
 	
 private:
 	static void initStatic();

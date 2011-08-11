@@ -29,6 +29,7 @@
     <File Name="../src/uutils.h"/>
     <File Name="../src/uwidget.cpp"/>
     <File Name="../src/uwidget.h"/>
+    <File Name="../uutils.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

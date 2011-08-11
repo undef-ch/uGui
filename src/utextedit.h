@@ -18,6 +18,9 @@ public:
 	void keyPressed(int key, uModifierKeysList mod);
 	void setSingleline(bool singleline);
 	
+	void onFocus();
+	void onUnfocus();
+	
 private:
 	void updateLineBreaks();
 	

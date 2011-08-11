@@ -1,6 +1,8 @@
 #include "uwidget.h"
 
 bool uWidget::isInitStatic = false;
+uFocusHandler uWidget::focusHandler;
+
 
 void uWidget::initStatic(){
 	if(!isInitStatic){
@@ -175,12 +177,15 @@ void uWidget::unregisterOfEvents() {
 	ofRemoveListener(ofEvents.draw, this, &uWidget::draw);
 }
 
-void uWidget::setFocus() {
+void uWidget::setFocused() {
 	styleCurrent = styleFocus;
+	focusHandler.setFocused(this);
+	uFocus::setFocused();
 }
 
-void uWidget::unsetFocus(){
+void uWidget::setUnfocused(){
 	styleCurrent = styleDefault;
+	uFocus::setUnfocused();
 }
 
 void uWidget::setSize(int w, int h){
@@ -217,4 +222,12 @@ void uWidget::setPosition(float _x, float _y){
 
 ofPoint uWidget::getPosition(){
 	return ofPoint(x, y);
+}
+
+uWidget* uWidget::getUltimateParent()
+{
+	if(parent != NULL)
+		return parent->parent;
+	else 
+		return this;
 }

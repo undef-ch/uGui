@@ -23,6 +23,7 @@
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		FA32986513F42CC300F82BEC /* uutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA32986413F42CC300F82BEC /* uutils.cpp */; };
 		FAFFA22913F3397400150724 /* ustyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFFA22313F3397400150724 /* ustyle.cpp */; };
 		FAFFA22A13F3397400150724 /* utextedit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFFA22513F3397400150724 /* utextedit.cpp */; };
 		FAFFA22B13F3397400150724 /* uwidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFFA22713F3397400150724 /* uwidget.cpp */; };
@@ -80,6 +81,7 @@
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		FA21871913F3F81200C519A5 /* uutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uutils.h; sourceTree = "<group>"; };
+		FA32986413F42CC300F82BEC /* uutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uutils.cpp; sourceTree = "<group>"; };
 		FAFFA22213F3397400150724 /* uGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uGui.h; sourceTree = "<group>"; };
 		FAFFA22313F3397400150724 /* ustyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ustyle.cpp; sourceTree = "<group>"; };
 		FAFFA22413F3397400150724 /* ustyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ustyle.h; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				FAFFA22713F3397400150724 /* uwidget.cpp */,
 				FAFFA22813F3397400150724 /* uwidget.h */,
 				FA21871913F3F81200C519A5 /* uutils.h */,
+				FA32986413F42CC300F82BEC /* uutils.cpp */,
 			);
 			name = src;
 			path = ../src;
@@ -312,6 +315,7 @@
 				FAFFA22A13F3397400150724 /* utextedit.cpp in Sources */,
 				FAFFA22B13F3397400150724 /* uwidget.cpp in Sources */,
 				FAFFA23313F339AF00150724 /* exampleApp.cpp in Sources */,
+				FA32986513F42CC300F82BEC /* uutils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

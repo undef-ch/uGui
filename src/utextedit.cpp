@@ -153,7 +153,7 @@ void uTextEdit::updateLineBreaks(){
 			str.replace(pos, 1, "", 0, 0);
 			numLines++;
 		}
-		numCharsLastLine = text.size() - lastOcurence+numLines;
+		numCharsLastLine = text.size() - lastOcurence + numLines;
 	}else{
 		numCharsLastLine = text.size();
 	}
@@ -166,10 +166,22 @@ void uTextEdit::setSingleline(bool s){
 
 void uTextEdit::mousePressed(int x, int y, int button) {
 	selectFrom = selectTo = -1;
+	setFocused();
 }
 
 void uTextEdit::mouseReleased(int x, int y, int button) {
+	
+}
+
+void uTextEdit::onFocus()
+{
 	blinkerCount = 0;
 	editing = true;
 	showBlinker = true;
 }
+
+void uTextEdit::onUnfocus()
+{
+	editing = false;
+}
+
