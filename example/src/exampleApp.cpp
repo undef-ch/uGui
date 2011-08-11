@@ -10,14 +10,11 @@ void exampleApp::setup(){
 	gui.setPosition(100, 100);
 	
 	uTextEdit* tEdit = new uTextEdit();
-	tEdit->setSingleline(true);
 	gui.addChild(tEdit);
 	
-	/*
-	tEdit = new uTextEdit();
+	tEdit = new uTextEdit(false);
 	tEdit->setPosition(500, 0);
 	gui.addChild(tEdit);
-	 */
 }
 
 //--------------------------------------------------------------

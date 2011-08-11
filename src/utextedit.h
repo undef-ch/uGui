@@ -6,7 +6,7 @@
 class uTextEdit : public uWidget {
 
 public:
-	uTextEdit();
+	uTextEdit(bool singleline=true);
 	~uTextEdit();
 
 	void setText(string text);

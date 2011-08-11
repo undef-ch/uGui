@@ -20,7 +20,7 @@
 					20,
 					993,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -41,6 +41,21 @@
 		perUserProjectItems = {
 			FA2186EB13F3842500C519A5 /* XCBuildMessageTextBookmark */ = FA2186EB13F3842500C519A5 /* XCBuildMessageTextBookmark */;
 			FA2186EC13F3842500C519A5 /* PBXTextBookmark */ = FA2186EC13F3842500C519A5 /* PBXTextBookmark */;
+			FA2186F513F3DD6000C519A5 /* PBXTextBookmark */ = FA2186F513F3DD6000C519A5 /* PBXTextBookmark */;
+			FA2186F713F3DD6000C519A5 /* PBXTextBookmark */ = FA2186F713F3DD6000C519A5 /* PBXTextBookmark */;
+			FA2186F813F3DD6000C519A5 /* PBXTextBookmark */ = FA2186F813F3DD6000C519A5 /* PBXTextBookmark */;
+			FA2186F913F3DD6000C519A5 /* PBXTextBookmark */ = FA2186F913F3DD6000C519A5 /* PBXTextBookmark */;
+			FA2186FA13F3DD6000C519A5 /* PBXTextBookmark */ = FA2186FA13F3DD6000C519A5 /* PBXTextBookmark */;
+			FA21870613F3DE5F00C519A5 /* PBXTextBookmark */ = FA21870613F3DE5F00C519A5 /* PBXTextBookmark */;
+			FA21870713F3DE5F00C519A5 /* PBXTextBookmark */ = FA21870713F3DE5F00C519A5 /* PBXTextBookmark */;
+			FA21870813F3DE5F00C519A5 /* PBXTextBookmark */ = FA21870813F3DE5F00C519A5 /* PBXTextBookmark */;
+			FA21870913F3DE5F00C519A5 /* PBXTextBookmark */ = FA21870913F3DE5F00C519A5 /* PBXTextBookmark */;
+			FA21870A13F3DE5F00C519A5 /* PBXTextBookmark */ = FA21870A13F3DE5F00C519A5 /* PBXTextBookmark */;
+			FA21870E13F3DE6E00C519A5 /* PBXTextBookmark */ = FA21870E13F3DE6E00C519A5 /* PBXTextBookmark */;
+			FA21870F13F3DE6E00C519A5 /* PBXTextBookmark */ = FA21870F13F3DE6E00C519A5 /* PBXTextBookmark */;
+			FA21871013F3DE6E00C519A5 /* PBXTextBookmark */ = FA21871013F3DE6E00C519A5 /* PBXTextBookmark */;
+			FA21871413F3DE9300C519A5 /* PBXTextBookmark */ = FA21871413F3DE9300C519A5 /* PBXTextBookmark */;
+			FA21871513F3DE9300C519A5 /* PBXTextBookmark */ = FA21871513F3DE9300C519A5 /* PBXTextBookmark */;
 			FAFFA21A13F338CE00150724 = FAFFA21A13F338CE00150724 /* PBXTextBookmark */;
 			FAFFA21C13F338CE00150724 = FAFFA21C13F338CE00150724 /* PBXTextBookmark */;
 			FAFFA21E13F338D000150724 = FAFFA21E13F338D000150724 /* PBXTextBookmark */;
@@ -415,7 +430,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 157;
+		rLoc = 162;
 		rType = 1;
 	};
 	FA2186EC13F3842500C519A5 /* PBXTextBookmark */ = {
@@ -423,10 +438,166 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 158";
 		rLen = 0;
-		rLoc = 3771;
+		rLoc = 3899;
 		rType = 0;
 		vrLen = 531;
 		vrLoc = 3434;
+	};
+	FA2186F513F3DD6000C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA2186F613F3DD6000C519A5 /* stl_algo.h */;
+		name = "stl_algo.h: 190";
+		rLen = 0;
+		rLoc = 6312;
+		rType = 0;
+		vrLen = 1317;
+		vrLoc = 5939;
+	};
+	FA2186F613F3DD6000C519A5 /* stl_algo.h */ = {
+		isa = PBXFileReference;
+		name = stl_algo.h;
+		path = "/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/bits/stl_algo.h";
+		sourceTree = "<absolute>";
+	};
+	FA2186F713F3DD6000C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
+		name = "utextedit.h: 19";
+		rLen = 35;
+		rLoc = 387;
+		rType = 0;
+		vrLen = 670;
+		vrLoc = 0;
+	};
+	FA2186F813F3DD6000C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
+		name = "exampleApp.cpp: 16";
+		rLen = 0;
+		rLoc = 305;
+		rType = 0;
+		vrLen = 1258;
+		vrLoc = 0;
+	};
+	FA2186F913F3DD6000C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
+		name = "utextedit.cpp: 157";
+		rLen = 0;
+		rLoc = 3876;
+		rType = 0;
+		vrLen = 1258;
+		vrLoc = 2682;
+	};
+	FA2186FA13F3DD6000C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
+		name = "utextedit.cpp: 80";
+		rLen = 0;
+		rLoc = 2216;
+		rType = 0;
+		vrLen = 1481;
+		vrLoc = 932;
+	};
+	FA21870613F3DE5F00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
+		name = "utextedit.h: 9";
+		rLen = 0;
+		rLoc = 161;
+		rType = 0;
+		vrLen = 690;
+		vrLoc = 0;
+	};
+	FA21870713F3DE5F00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22713F3397400150724 /* uwidget.cpp */;
+		name = "uwidget.cpp: 49";
+		rLen = 0;
+		rLoc = 986;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 311;
+	};
+	FA21870813F3DE5F00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
+		name = "utextedit.cpp: 11";
+		rLen = 0;
+		rLoc = 367;
+		rType = 0;
+		vrLen = 1383;
+		vrLoc = 0;
+	};
+	FA21870913F3DE5F00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
+		name = "exampleApp.cpp: 16";
+		rLen = 0;
+		rLoc = 305;
+		rType = 0;
+		vrLen = 1258;
+		vrLoc = 0;
+	};
+	FA21870A13F3DE5F00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
+		name = "exampleApp.cpp: 12";
+		rLen = 0;
+		rLoc = 281;
+		rType = 0;
+		vrLen = 1164;
+		vrLoc = 0;
+	};
+	FA21870E13F3DE6E00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
+		name = "exampleApp.cpp: 12";
+		rLen = 0;
+		rLoc = 281;
+		rType = 0;
+		vrLen = 1287;
+		vrLoc = 0;
+	};
+	FA21870F13F3DE6E00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
+		name = "utextedit.cpp: 11";
+		rLen = 0;
+		rLoc = 367;
+		rType = 0;
+		vrLen = 1383;
+		vrLoc = 0;
+	};
+	FA21871013F3DE6E00C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
+		name = "utextedit.cpp: 8";
+		rLen = 0;
+		rLoc = 223;
+		rType = 0;
+		vrLen = 1307;
+		vrLoc = 0;
+	};
+	FA21871413F3DE9300C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
+		name = "utextedit.cpp: 8";
+		rLen = 0;
+		rLoc = 223;
+		rType = 0;
+		vrLen = 1383;
+		vrLoc = 0;
+	};
+	FA21871513F3DE9300C519A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
+		name = "exampleApp.cpp: 17";
+		rLen = 0;
+		rLoc = 366;
+		rType = 0;
+		vrLen = 1283;
+		vrLoc = 0;
 	};
 	FAFFA20C13F336F100150724 /* emptyExample */ = {
 		isa = PBXExecutable;
@@ -547,23 +718,23 @@
 	};
 	FAFFA22513F3397400150724 /* utextedit.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 2314}}";
-			sepNavSelRange = "{3748, 0}";
-			sepNavVisRange = "{2682, 1258}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 2210}}";
+			sepNavSelRange = "{223, 0}";
+			sepNavVisRange = "{0, 1383}";
 		};
 	};
 	FAFFA22613F3397400150724 /* utextedit.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1171, 734}}";
-			sepNavSelRange = "{367, 35}";
-			sepNavVisRange = "{0, 670}";
+			sepNavSelRange = "{161, 0}";
+			sepNavVisRange = "{0, 690}";
 		};
 	};
 	FAFFA22713F3397400150724 /* uwidget.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1171, 2938}}";
 			sepNavSelRange = "{986, 0}";
-			sepNavVisRange = "{331, 1062}";
+			sepNavVisRange = "{311, 1128}";
 		};
 	};
 	FAFFA22813F3397400150724 /* uwidget.h */ = {
@@ -586,9 +757,9 @@
 	};
 	FAFFA23113F339AF00150724 /* exampleApp.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 897}}";
-			sepNavSelRange = "{165, 0}";
-			sepNavVisRange = "{0, 1315}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 949}}";
+			sepNavSelRange = "{366, 0}";
+			sepNavVisRange = "{0, 1283}";
 		};
 	};
 	FAFFA23613F339B300150724 /* PBXTextBookmark */ = {
@@ -728,7 +899,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 14";
 		rLen = 0;
-		rLoc = 631;
+		rLoc = 798;
 		rType = 0;
 		vrLen = 1131;
 		vrLoc = 0;
@@ -876,7 +1047,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 14";
 		rLen = 0;
-		rLoc = 648;
+		rLoc = 815;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 0;
@@ -896,7 +1067,7 @@
 		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
 		name = "exampleApp.cpp: 12";
 		rLen = 0;
-		rLoc = 382;
+		rLoc = 387;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 0;
@@ -906,7 +1077,7 @@
 		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
 		name = "exampleApp.cpp: 13";
 		rLen = 0;
-		rLoc = 384;
+		rLoc = 389;
 		rType = 0;
 		vrLen = 1291;
 		vrLoc = 0;
@@ -916,7 +1087,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 14";
 		rLen = 0;
-		rLoc = 648;
+		rLoc = 815;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 0;
@@ -996,7 +1167,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 14";
 		rLen = 0;
-		rLoc = 648;
+		rLoc = 815;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 0;
@@ -1086,7 +1257,7 @@
 		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
 		name = "exampleApp.cpp: 13";
 		rLen = 0;
-		rLoc = 384;
+		rLoc = 389;
 		rType = 0;
 		vrLen = 1291;
 		vrLoc = 0;
@@ -1106,7 +1277,7 @@
 		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
 		name = "exampleApp.cpp: 15";
 		rLen = 0;
-		rLoc = 385;
+		rLoc = 390;
 		rType = 0;
 		vrLen = 1318;
 		vrLoc = 0;
@@ -1116,7 +1287,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 14";
 		rLen = 14;
-		rLoc = 631;
+		rLoc = 798;
 		rType = 0;
 		vrLen = 1135;
 		vrLoc = 0;
@@ -1183,7 +1354,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 17";
 		rLen = 0;
-		rLoc = 711;
+		rLoc = 878;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 0;
@@ -1223,7 +1394,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 17";
 		rLen = 0;
-		rLoc = 711;
+		rLoc = 878;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 0;
@@ -1273,7 +1444,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 18";
 		rLen = 0;
-		rLoc = 834;
+		rLoc = 1001;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 0;
@@ -1313,7 +1484,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 15";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 357;
 		rType = 0;
 		vrLen = 420;
 		vrLoc = 0;
@@ -1340,7 +1511,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1293;
 		vrLoc = 20;
@@ -1350,7 +1521,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 49";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1286;
 		vrLoc = 20;
@@ -1370,7 +1541,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 46";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 20;
@@ -1400,7 +1571,7 @@
 		comments = "Within this context";
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		rLen = 0;
-		rLoc = 86;
+		rLoc = 91;
 		rType = 1;
 	};
 	FAFFA33213F34D5500150724 /* PBXTextBookmark */ = {
@@ -1408,7 +1579,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 49";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 757;
 		vrLoc = 568;
@@ -1418,7 +1589,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 15";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 357;
 		rType = 0;
 		vrLen = 420;
 		vrLoc = 0;
@@ -1448,7 +1619,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 49";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 114;
@@ -1458,7 +1629,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 61";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1351;
 		vrLoc = 144;
@@ -1468,7 +1639,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 61";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1346;
 		vrLoc = 411;
@@ -1478,7 +1649,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 65";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1324;
 		vrLoc = 411;
@@ -1488,7 +1659,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 65";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1334;
 		vrLoc = 411;
@@ -1498,7 +1669,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 44";
 		rLen = 0;
-		rLoc = 2124;
+		rLoc = 2252;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 411;
@@ -1508,7 +1679,7 @@
 		fRef = FAFFA23113F339AF00150724 /* exampleApp.cpp */;
 		name = "exampleApp.cpp: 15";
 		rLen = 0;
-		rLoc = 385;
+		rLoc = 390;
 		rType = 0;
 		vrLen = 1318;
 		vrLoc = 0;
@@ -1548,7 +1719,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 411;
@@ -1558,7 +1729,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 7";
 		rLen = 0;
-		rLoc = 456;
+		rLoc = 623;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 0;
@@ -1568,7 +1739,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 19";
 		rLen = 0;
-		rLoc = 848;
+		rLoc = 1015;
 		rType = 0;
 		vrLen = 1405;
 		vrLoc = 0;
@@ -1578,7 +1749,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1290;
 		vrLoc = 393;
@@ -1588,7 +1759,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 62";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 1317;
 		vrLoc = 393;
@@ -1598,7 +1769,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 50";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 634;
 		vrLoc = 1070;
@@ -1608,7 +1779,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 12";
 		rLen = 45;
-		rLoc = 161;
+		rLoc = 181;
 		rType = 0;
 		vrLen = 498;
 		vrLoc = 0;
@@ -1618,7 +1789,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 18;
-		rLoc = 2167;
+		rLoc = 2295;
 		rType = 0;
 		vrLen = 1383;
 		vrLoc = 287;
@@ -1628,7 +1799,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 15";
 		rLen = 0;
-		rLoc = 555;
+		rLoc = 722;
 		rType = 0;
 		vrLen = 1218;
 		vrLoc = 0;
@@ -1638,7 +1809,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 74";
 		rLen = 0;
-		rLoc = 2984;
+		rLoc = 3112;
 		rType = 0;
 		vrLen = 1339;
 		vrLoc = 754;
@@ -1648,7 +1819,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 67";
 		rLen = 0;
-		rLoc = 2452;
+		rLoc = 2580;
 		rType = 0;
 		vrLen = 1350;
 		vrLoc = 754;
@@ -1658,7 +1829,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 7";
 		rLen = 0;
-		rLoc = 378;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1197;
 		vrLoc = 0;
@@ -1668,7 +1839,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 75";
 		rLen = 0;
-		rLoc = 2996;
+		rLoc = 3124;
 		rType = 0;
 		vrLen = 1349;
 		vrLoc = 715;
@@ -1678,7 +1849,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 57";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 420;
@@ -1688,7 +1859,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 67";
 		rLen = 0;
-		rLoc = 2452;
+		rLoc = 2580;
 		rType = 0;
 		vrLen = 1360;
 		vrLoc = 715;
@@ -1698,7 +1869,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 80";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3366;
 		rType = 0;
 		vrLen = 1349;
 		vrLoc = 715;
@@ -1708,7 +1879,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 50";
 		rLen = 0;
-		rLoc = 2124;
+		rLoc = 2252;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 715;
@@ -1718,7 +1889,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 7";
 		rLen = 0;
-		rLoc = 376;
+		rLoc = 543;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 0;
@@ -1728,7 +1899,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 7";
 		rLen = 0;
-		rLoc = 376;
+		rLoc = 543;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 0;
@@ -1738,7 +1909,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 7";
 		rLen = 0;
-		rLoc = 306;
+		rLoc = 473;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 0;
@@ -1748,7 +1919,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 72";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2747;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 838;
@@ -1758,7 +1929,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 61";
 		rLen = 0;
-		rLoc = 2186;
+		rLoc = 2314;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 838;
@@ -1768,7 +1939,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 29";
 		rLen = 0;
-		rLoc = 834;
+		rLoc = 1001;
 		rType = 0;
 		vrLen = 1035;
 		vrLoc = 295;
@@ -1778,7 +1949,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 26";
 		rLen = 0;
-		rLoc = 648;
+		rLoc = 815;
 		rType = 0;
 		vrLen = 1036;
 		vrLoc = 295;
@@ -1788,7 +1959,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 73";
 		rLen = 0;
-		rLoc = 2941;
+		rLoc = 3069;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 595;
@@ -1798,7 +1969,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 2147;
+		rLoc = 2275;
 		rType = 0;
 		vrLen = 1375;
 		vrLoc = 595;
@@ -1808,7 +1979,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 73";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 2723;
 		rType = 0;
 		vrLen = 1435;
 		vrLoc = 595;
@@ -1818,7 +1989,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 72";
 		rLen = 0;
-		rLoc = 2524;
+		rLoc = 2652;
 		rType = 0;
 		vrLen = 1435;
 		vrLoc = 595;
@@ -1828,7 +1999,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 57";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 552;
@@ -1838,7 +2009,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 73";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 2723;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 640;
@@ -1848,7 +2019,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 79";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1284;
 		vrLoc = 936;
@@ -1858,7 +2029,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 79";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1284;
 		vrLoc = 936;
@@ -1868,7 +2039,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 79";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1284;
 		vrLoc = 936;
@@ -1878,7 +2049,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 77";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1356;
 		vrLoc = 893;
@@ -1888,7 +2059,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 77";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 893;
@@ -1898,7 +2069,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 66";
 		rLen = 0;
-		rLoc = 2449;
+		rLoc = 2577;
 		rType = 0;
 		vrLen = 1345;
 		vrLoc = 893;
@@ -1908,7 +2079,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 8";
 		rLen = 0;
-		rLoc = 456;
+		rLoc = 623;
 		rType = 0;
 		vrLen = 1378;
 		vrLoc = 726;
@@ -1918,7 +2089,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 8";
 		rLen = 0;
-		rLoc = 456;
+		rLoc = 623;
 		rType = 0;
 		vrLen = 1312;
 		vrLoc = 20;
@@ -1928,7 +2099,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 79";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1399;
 		vrLoc = 740;
@@ -1938,7 +2109,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 78";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 740;
@@ -1948,7 +2119,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 466;
 		vrLoc = 448;
@@ -1958,7 +2129,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 78";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 740;
@@ -1968,7 +2139,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 422;
 		vrLoc = 448;
@@ -1978,7 +2149,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 78";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 740;
@@ -1988,7 +2159,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 78";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1451;
 		vrLoc = 740;
@@ -1998,7 +2169,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 78";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 740;
@@ -2047,7 +2218,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 67";
 		rLen = 13;
-		rLoc = 2414;
+		rLoc = 2542;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 740;
@@ -2057,7 +2228,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 67";
 		rLen = 0;
-		rLoc = 2449;
+		rLoc = 2577;
 		rType = 0;
 		vrLen = 1368;
 		vrLoc = 826;
@@ -2067,7 +2238,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 73";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 2723;
 		rType = 0;
 		vrLen = 1402;
 		vrLoc = 848;
@@ -2077,7 +2248,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 83";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1385;
 		vrLoc = 870;
@@ -2087,7 +2258,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 78";
 		rLen = 0;
-		rLoc = 2862;
+		rLoc = 2990;
 		rType = 0;
 		vrLen = 1290;
 		vrLoc = 968;
@@ -2097,7 +2268,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 78";
 		rLen = 0;
-		rLoc = 2862;
+		rLoc = 2990;
 		rType = 0;
 		vrLen = 1184;
 		vrLoc = 1095;
@@ -2107,7 +2278,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 546;
 		vrLoc = 462;
@@ -2117,7 +2288,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 84";
 		rLen = 0;
-		rLoc = 3076;
+		rLoc = 3204;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 1114;
@@ -2127,7 +2298,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 74";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 2723;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 1116;
@@ -2137,7 +2308,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 74";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 2723;
 		rType = 0;
 		vrLen = 1207;
 		vrLoc = 1155;
@@ -2147,7 +2318,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 68";
 		rLen = 0;
-		rLoc = 2452;
+		rLoc = 2580;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 1114;
@@ -2157,7 +2328,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 42";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1327;
 		vrLoc = 0;
@@ -2167,7 +2338,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 41";
 		rLen = 0;
-		rLoc = 1138;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1295;
 		vrLoc = 20;
@@ -2177,7 +2348,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 42";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1348;
 		vrLoc = 44;
@@ -2187,7 +2358,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 41";
 		rLen = 0;
-		rLoc = 1091;
+		rLoc = 1258;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 114;
@@ -2197,7 +2368,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 47";
 		rLen = 0;
-		rLoc = 1651;
+		rLoc = 1818;
 		rType = 0;
 		vrLen = 1131;
 		vrLoc = 295;
@@ -2207,7 +2378,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 38";
 		rLen = 0;
-		rLoc = 1039;
+		rLoc = 1206;
 		rType = 0;
 		vrLen = 1088;
 		vrLoc = 370;
@@ -2217,7 +2388,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 46";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1099;
 		vrLoc = 370;
@@ -2227,7 +2398,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 46";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1152;
 		vrLoc = 373;
@@ -2237,7 +2408,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 46";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 401;
@@ -2247,7 +2418,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 437;
@@ -2257,7 +2428,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1651;
+		rLoc = 1818;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 448;
@@ -2267,7 +2438,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 55";
 		rLen = 0;
-		rLoc = 1679;
+		rLoc = 1846;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 448;
@@ -2277,7 +2448,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 65";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 546;
 		vrLoc = 84;
@@ -2287,7 +2458,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 55";
 		rLen = 0;
-		rLoc = 1679;
+		rLoc = 1846;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 448;
@@ -2297,7 +2468,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1634;
+		rLoc = 1801;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 399;
@@ -2307,7 +2478,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1651;
+		rLoc = 1818;
 		rType = 0;
 		vrLen = 1159;
 		vrLoc = 402;
@@ -2317,7 +2488,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 65";
 		rLen = 0;
-		rLoc = 2000;
+		rLoc = 2188;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 625;
@@ -2327,7 +2498,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 41";
 		rLen = 0;
-		rLoc = 1138;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1229;
 		vrLoc = 670;
@@ -2337,7 +2508,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 41";
 		rLen = 0;
-		rLoc = 1138;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 715;
@@ -2347,7 +2518,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 59";
 		rLen = 0;
-		rLoc = 1778;
+		rLoc = 1945;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 715;
@@ -2357,7 +2528,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 19";
 		rLen = 0;
-		rLoc = 405;
+		rLoc = 425;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 0;
@@ -2367,7 +2538,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 18";
 		rLen = 19;
-		rLoc = 340;
+		rLoc = 360;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 0;
@@ -2377,7 +2548,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 56";
 		rLen = 0;
-		rLoc = 1737;
+		rLoc = 1904;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 808;
@@ -2427,7 +2598,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 72";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2254;
 		rType = 0;
 		vrLen = 626;
 		vrLoc = 44;
@@ -2623,7 +2794,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 61";
 		rLen = 0;
-		rLoc = 1807;
+		rLoc = 1974;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 808;
@@ -2633,7 +2804,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 21";
 		rLen = 0;
-		rLoc = 440;
+		rLoc = 460;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 0;
@@ -2761,7 +2932,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 18";
 		rLen = 23;
-		rLoc = 340;
+		rLoc = 360;
 		rType = 0;
 		vrLen = 521;
 		vrLoc = 0;
@@ -2771,7 +2942,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 61";
 		rLen = 0;
-		rLoc = 1807;
+		rLoc = 1974;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 808;
@@ -2781,7 +2952,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 63";
 		rLen = 0;
-		rLoc = 1919;
+		rLoc = 2086;
 		rType = 0;
 		vrLen = 1309;
 		vrLoc = 826;
@@ -2791,7 +2962,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 70";
 		rLen = 0;
-		rLoc = 2088;
+		rLoc = 2216;
 		rType = 0;
 		vrLen = 1352;
 		vrLoc = 848;
@@ -2801,7 +2972,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 66";
 		rLen = 0;
-		rLoc = 1978;
+		rLoc = 2145;
 		rType = 0;
 		vrLen = 1371;
 		vrLoc = 848;
@@ -2941,7 +3112,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 29";
 		rLen = 0;
-		rLoc = 582;
+		rLoc = 602;
 		rType = 0;
 		vrLen = 553;
 		vrLoc = 0;
@@ -2951,7 +3122,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 69";
 		rLen = 0;
-		rLoc = 2027;
+		rLoc = 2216;
 		rType = 0;
 		vrLen = 1416;
 		vrLoc = 848;
@@ -2961,7 +3132,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 38";
 		rLen = 0;
-		rLoc = 1039;
+		rLoc = 1206;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 398;
@@ -2971,7 +3142,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 29";
 		rLen = 0;
-		rLoc = 582;
+		rLoc = 602;
 		rType = 0;
 		vrLen = 553;
 		vrLoc = 0;
@@ -2981,7 +3152,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 112";
 		rLen = 0;
-		rLoc = 3872;
+		rLoc = 4000;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 1628;
@@ -3082,7 +3253,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 20";
 		rLen = 0;
-		rLoc = 601;
+		rLoc = 768;
 		rType = 0;
 		vrLen = 1082;
 		vrLoc = 398;
@@ -3092,7 +3263,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 32";
 		rLen = 0;
-		rLoc = 816;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 401;
@@ -3102,7 +3273,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 32";
 		rLen = 0;
-		rLoc = 816;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 401;
@@ -3239,7 +3410,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 35";
 		rLen = 0;
-		rLoc = 834;
+		rLoc = 1001;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 401;
@@ -3249,7 +3420,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 49";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1290;
 		vrLoc = 430;
@@ -3259,7 +3430,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1307;
 		vrLoc = 430;
@@ -3269,7 +3440,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 499;
@@ -3279,7 +3450,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 31";
 		rLen = 0;
-		rLoc = 643;
+		rLoc = 663;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 0;
@@ -3289,7 +3460,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 120";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1218;
 		vrLoc = 1866;
@@ -3299,7 +3470,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 120";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1202;
 		vrLoc = 1877;
@@ -3309,7 +3480,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 47";
 		rLen = 0;
-		rLoc = 1138;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1229;
 		vrLoc = 563;
@@ -3319,7 +3490,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 124";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 1878;
@@ -3329,7 +3500,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 47";
 		rLen = 0;
-		rLoc = 1138;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 689;
@@ -3339,7 +3510,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 47";
 		rLen = 0;
-		rLoc = 1106;
+		rLoc = 1273;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 721;
@@ -3349,7 +3520,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 47";
 		rLen = 0;
-		rLoc = 1106;
+		rLoc = 1273;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 764;
@@ -3359,7 +3530,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 47";
 		rLen = 0;
-		rLoc = 1138;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1266;
 		vrLoc = 793;
@@ -3369,7 +3540,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 47";
 		rLen = 0;
-		rLoc = 1138;
+		rLoc = 1305;
 		rType = 0;
 		vrLen = 1324;
 		vrLoc = 808;
@@ -3379,7 +3550,7 @@
 		fRef = FAFFA22613F3397400150724 /* utextedit.h */;
 		name = "utextedit.h: 25";
 		rLen = 0;
-		rLoc = 492;
+		rLoc = 512;
 		rType = 0;
 		vrLen = 612;
 		vrLoc = 0;
@@ -3389,7 +3560,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 61";
 		rLen = 0;
-		rLoc = 1678;
+		rLoc = 1845;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 1418;
@@ -3399,7 +3570,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 37";
 		rLen = 0;
-		rLoc = 907;
+		rLoc = 1074;
 		rType = 0;
 		vrLen = 1248;
 		vrLoc = 689;
@@ -3409,7 +3580,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 88";
 		rLen = 0;
-		rLoc = 2284;
+		rLoc = 2412;
 		rType = 0;
 		vrLen = 1173;
 		vrLoc = 1847;
@@ -3419,7 +3590,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 106";
 		rLen = 0;
-		rLoc = 3067;
+		rLoc = 3195;
 		rType = 0;
 		vrLen = 1206;
 		vrLoc = 1821;
@@ -3429,7 +3600,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 126";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 1821;
@@ -3439,7 +3610,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 126";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 1864;
@@ -3449,7 +3620,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 59";
 		rLen = 0;
-		rLoc = 1660;
+		rLoc = 1827;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 531;
@@ -3459,7 +3630,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1326;
 		vrLoc = 563;
@@ -3469,7 +3640,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1330;
 		vrLoc = 563;
@@ -3479,7 +3650,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 57";
 		rLen = 0;
-		rLoc = 1631;
+		rLoc = 1798;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 563;
@@ -3489,7 +3660,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 55";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1306;
 		vrLoc = 563;
@@ -3499,7 +3670,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1351;
 		vrLoc = 563;
@@ -3509,7 +3680,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1351;
 		vrLoc = 563;
@@ -3519,7 +3690,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 1235;
+		rLoc = 1402;
 		rType = 0;
 		vrLen = 1348;
 		vrLoc = 563;
@@ -3539,7 +3710,7 @@
 		comments = "'s' was not declared in this scope";
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		rLen = 1;
-		rLoc = 58;
+		rLoc = 66;
 		rType = 1;
 	};
 	FAFFA5BD13F3702700150724 /* PBXTextBookmark */ = {
@@ -3547,7 +3718,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 794;
 		vrLoc = 1141;
@@ -3557,7 +3728,7 @@
 		comments = "'s' was not declared in this scope";
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		rLen = 1;
-		rLoc = 58;
+		rLoc = 66;
 		rType = 1;
 	};
 	FAFFA5C313F3703300150724 /* PBXTextBookmark */ = {
@@ -3565,7 +3736,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 60";
 		rLen = 0;
-		rLoc = 1594;
+		rLoc = 1761;
 		rType = 0;
 		vrLen = 1342;
 		vrLoc = 905;
@@ -3575,7 +3746,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 59";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1320;
 		vrLoc = 905;
@@ -3585,7 +3756,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 58";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1320;
 		vrLoc = 905;
@@ -3595,7 +3766,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 130";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 1951;
@@ -3605,7 +3776,7 @@
 		comments = "'lastOccurence' was not declared in this scope";
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		rLen = 0;
-		rLoc = 153;
+		rLoc = 158;
 		rType = 1;
 	};
 	FAFFA5D813F3709800150724 /* PBXTextBookmark */ = {
@@ -3613,7 +3784,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 130";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 564;
 		vrLoc = 2776;
@@ -3623,7 +3794,7 @@
 		comments = "'lastOccurence' was not declared in this scope";
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		rLen = 0;
-		rLoc = 153;
+		rLoc = 158;
 		rType = 1;
 	};
 	FAFFA5DC13F370A300150724 /* PBXTextBookmark */ = {
@@ -3631,7 +3802,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 130";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 1951;
@@ -3641,7 +3812,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 127";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1271;
 		vrLoc = 1951;
@@ -3651,7 +3822,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 130";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1181;
 		vrLoc = 1951;
@@ -3661,7 +3832,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 127";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 1951;
@@ -3671,7 +3842,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 132";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1255;
 		vrLoc = 2015;
@@ -3681,7 +3852,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 132";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1286;
 		vrLoc = 2015;
@@ -3691,7 +3862,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 132";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1291;
 		vrLoc = 2015;
@@ -3701,7 +3872,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 132";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 2015;
@@ -3711,7 +3882,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 132";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 1302;
 		vrLoc = 2015;
@@ -3721,7 +3892,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 49";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1229;
 		vrLoc = 707;
@@ -3731,7 +3902,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1235;
+		rLoc = 1402;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 707;
@@ -3741,7 +3912,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1252;
+		rLoc = 1419;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 463;
@@ -3751,7 +3922,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 54";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1152;
 		vrLoc = 432;
@@ -3761,7 +3932,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 54";
 		rLen = 0;
-		rLoc = 1522;
+		rLoc = 1689;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 432;
@@ -3771,7 +3942,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 52";
 		rLen = 0;
-		rLoc = 1492;
+		rLoc = 1659;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 432;
@@ -3781,7 +3952,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 55";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1176;
 		vrLoc = 432;
@@ -3791,7 +3962,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1480;
+		rLoc = 1647;
 		rType = 0;
 		vrLen = 1184;
 		vrLoc = 432;
@@ -3801,7 +3972,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1479;
+		rLoc = 1646;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 579;
@@ -3811,7 +3982,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1472;
+		rLoc = 1639;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 579;
@@ -3821,7 +3992,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 51";
 		rLen = 0;
-		rLoc = 1472;
+		rLoc = 1639;
 		rType = 0;
 		vrLen = 1317;
 		vrLoc = 579;
@@ -3831,7 +4002,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 55";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 579;
@@ -3841,7 +4012,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 55";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 579;
@@ -3851,7 +4022,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 50";
 		rLen = 0;
-		rLoc = 1384;
+		rLoc = 1551;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 580;
@@ -3861,7 +4032,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 49";
 		rLen = 0;
-		rLoc = 1215;
+		rLoc = 1382;
 		rType = 0;
 		vrLen = 1416;
 		vrLoc = 176;
@@ -3871,7 +4042,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 43";
 		rLen = 0;
-		rLoc = 1035;
+		rLoc = 1202;
 		rType = 0;
 		vrLen = 1409;
 		vrLoc = 176;
@@ -3881,7 +4052,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 39";
 		rLen = 0;
-		rLoc = 945;
+		rLoc = 1112;
 		rType = 0;
 		vrLen = 1409;
 		vrLoc = 176;
@@ -3891,7 +4062,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 32";
 		rLen = 0;
-		rLoc = 816;
+		rLoc = 983;
 		rType = 0;
 		vrLen = 1411;
 		vrLoc = 176;
@@ -3901,7 +4072,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 8";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 550;
 		rType = 0;
 		vrLen = 1470;
 		vrLoc = 0;
@@ -3911,7 +4082,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 49";
 		rLen = 0;
-		rLoc = 1220;
+		rLoc = 1387;
 		rType = 0;
 		vrLen = 1451;
 		vrLoc = 0;
@@ -3921,7 +4092,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1183;
+		rLoc = 1350;
 		rType = 0;
 		vrLen = 1293;
 		vrLoc = 359;
@@ -3931,7 +4102,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 129";
 		rLen = 0;
-		rLoc = 3728;
+		rLoc = 3856;
 		rType = 0;
 		vrLen = 514;
 		vrLoc = 2747;
@@ -3941,7 +4112,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 48";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1332;
 		rType = 0;
 		vrLen = 1265;
 		vrLoc = 465;
@@ -3951,7 +4122,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 50";
 		rLen = 0;
-		rLoc = 1324;
+		rLoc = 1491;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 465;
@@ -3961,7 +4132,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 50";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1438;
 		rType = 0;
 		vrLen = 1276;
 		vrLoc = 465;
@@ -3971,7 +4142,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 59";
 		rLen = 0;
-		rLoc = 1550;
+		rLoc = 1717;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 465;
@@ -3981,7 +4152,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 50";
 		rLen = 0;
-		rLoc = 1220;
+		rLoc = 1387;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 465;
@@ -3991,7 +4162,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 41";
 		rLen = 0;
-		rLoc = 963;
+		rLoc = 1130;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 741;
@@ -4001,7 +4172,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 122";
 		rLen = 0;
-		rLoc = 3727;
+		rLoc = 3855;
 		rType = 0;
 		vrLen = 1249;
 		vrLoc = 2005;
@@ -4011,7 +4182,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 119";
 		rLen = 0;
-		rLoc = 3279;
+		rLoc = 3407;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 2005;
@@ -4021,7 +4192,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 116";
 		rLen = 0;
-		rLoc = 3097;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 2005;
@@ -4031,7 +4202,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 124";
 		rLen = 0;
-		rLoc = 3313;
+		rLoc = 3441;
 		rType = 0;
 		vrLen = 1181;
 		vrLoc = 2005;
@@ -4041,7 +4212,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 116";
 		rLen = 0;
-		rLoc = 3124;
+		rLoc = 3252;
 		rType = 0;
 		vrLen = 1216;
 		vrLoc = 2005;
@@ -4051,7 +4222,7 @@
 		fRef = FAFFA22513F3397400150724 /* utextedit.cpp */;
 		name = "utextedit.cpp: 24";
 		rLen = 0;
-		rLoc = 630;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 1293;
 		vrLoc = 468;

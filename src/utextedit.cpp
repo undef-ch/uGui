@@ -1,9 +1,17 @@
 #include "ustyle.h"
 #include "utextedit.h"
 
-uTextEdit::uTextEdit():uWidget(),editing(false), selectFrom(0), selectTo(0), numLines(0), numCharsLastLine(0), isSingleline(false) {
-	setSize(300, 100);
+uTextEdit::uTextEdit(bool singleline):uWidget(),
+	editing(false), selectFrom(0), selectTo(0), 
+	numLines(0), numCharsLastLine(0), isSingleline(false) 
+{
 	font = uStyle::getFont();
+	setSingleline(singleline);
+	if(isSingleline)
+		setSize(300, font->getLineHeight()+styleCurrent.padding.top+styleCurrent.padding.bottom);
+	else
+		setSize(300, 100);
+	
 	//setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
 	//setText(getText()+" Und hier noch was dazu, damit es einen fehler gibt");
 }
@@ -75,11 +83,8 @@ void uTextEdit::keyPressed(int key, uModifierKeysList mod) {
 			break;
 			
 		case OF_KEY_RETURN:
-			text += "\n";
-			break;
-		case '\n':
 			if(!isSingleline)
-				text += key;
+				text += "\n";
 			break;
 		default:
 			text += char(key);
