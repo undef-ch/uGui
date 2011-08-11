@@ -49,7 +49,7 @@ void uTextEdit::draw() {
 				string tText=textDisplay;
 				blinkerPos.x = font->stringWidth(tText.substr(tText.size() - numCharsLastLine, numCharsLastLine));
 			}
-			//FIX FOR MISSING POSITION UPDATE WHEN LAST CHAR
+			//FIX FOR MISSING POSITION UPDATE WHEN LAST CHAR IS SPACE
 			int pos = 0;
 			while(textDisplay.size()>pos && textDisplay[textDisplay.size()-pos-1] == ' '){
 				pos++;
@@ -102,23 +102,26 @@ void uTextEdit::updateLineBreaks(){
 		while (it != words.end()) {
 			curStr = (*it);
 			
-			//TODO: this is not really good yet, has to check further back for a '\n'
-			if(curStr.size() > 1 && curStr[curStr.size()-1] == '\n'){
-				curW = 0;
+			std::vector<string> lineSplit = ofSplitString(curStr, "\n", true, true);
+			std::vector<string>::iterator sIt = lineSplit.begin();
+
+			while(sIt != lineSplit.end()){
+				curStr = *sIt;
+				++it;
+				++sIt;
+				
+				int strW = font->stringWidth(curStr);
+				if (curW+strW > innerBounds.width || sIt != lineSplit.end()) {
+					textDisplay += "\n";
+					curW = 0;
+				}
+				textDisplay += curStr;
+				if(it != words.end() && sIt == lineSplit.end()) textDisplay += " ";
+				curW += strW;
+				curW += spaceWidth;
+				curPos += curStr.size()+1;
+				
 			}
-			
-			int strW = font->stringWidth(curStr);
-			if (curW+strW > innerBounds.width) {
-				textDisplay += "\n";
-				curW = 0;
-			}
-			++it;
-			textDisplay += curStr;
-			if(it != words.end()) textDisplay += " ";
-			curW += strW;
-			curW += spaceWidth;
-			curPos += curStr.size()+1;
-			
 		}
 	}else{
 		textDisplay = text;
