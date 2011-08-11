@@ -8,3 +8,5 @@
 example/bin/example
 *.app
 *.build
+*.pbxuser
+*.mode1v3
