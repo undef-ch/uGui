@@ -21,6 +21,7 @@ public:
 		ret.drawBorder = false;
 		ret.colorBackground.set(120);
 		ret.colorForeground.set(30);
+		ret.colorSelection.setHex(0xFF6600);
 		ret.padding.set(5);
 		return ret;
 	}
@@ -47,10 +48,14 @@ public:
 
 	uStyle();
 	~uStyle();
+	
 	ofColor colorBackground;
 	ofColor colorForeground;
 	ofColor colorBorder;
+	ofColor colorSelection;
+	
 	bool drawBorder;
+	
 	uDistances padding;
 	uDistances margin;
 };

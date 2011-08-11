@@ -1,8 +1,20 @@
 #include "uwidget.h"
 
-uWidget::uWidget():registeredToOf(false), styleDefault(uStyle::getDefault()), styleFocus(uStyle::getFocus()), styleTrigger(uStyle::getTrigger()) {
+bool uWidget::isInitStatic = false;
+
+void uWidget::initStatic(){
+	if(!isInitStatic){
+		isInitStatic = true;
+	}
+}
+uWidget::uWidget():
+registeredToOf(false), styleDefault(uStyle::getDefault()), styleFocus(uStyle::getFocus()), styleTrigger(uStyle::getTrigger())
+{
 	styleCurrent=styleDefault;
 	setSize(100, 100);
+	modifierKeysListenTo.add(OF_KEY_MODIFIER);
+	modifierKeysListenTo.add(OF_KEY_ALT);
+	modifierKeysListenTo.add(OF_KEY_SHIFT);
 }
 
 uWidget::~uWidget() {
@@ -39,15 +51,22 @@ void uWidget::draw(ofEventArgs& e) {
 }
 
 void uWidget::keyPressed(ofKeyEventArgs& e) {
+	if(modifierKeysListenTo.contains(e.key))
+		modifierKeys.add(e.key);
+	
+	
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
 		(*it)->keyPressed(e);
 		++it;
 	}
-	keyPressed(e.key);
+	keyPressed(e.key, modifierKeys);
 }
 
 void uWidget::keyReleased(ofKeyEventArgs& e) {
+	if(modifierKeysListenTo.contains(e.key))
+		modifierKeys.remove(e.key);
+	
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
 		(*it)->keyReleased(e);
@@ -138,7 +157,7 @@ void uWidget::registerOfEvents() {
 	ofAddListener(ofEvents.mouseDragged, this, &uWidget::mouseDragged);
 	ofAddListener(ofEvents.keyPressed, this, &uWidget::keyPressed);
 	ofAddListener(ofEvents.keyReleased, this, &uWidget::keyReleased);
-
+	
 	ofAddListener(ofEvents.update, this, &uWidget::update);
 	ofAddListener(ofEvents.draw, this, &uWidget::draw);
 }
@@ -151,7 +170,7 @@ void uWidget::unregisterOfEvents() {
 	ofRemoveListener(ofEvents.mouseDragged, this, &uWidget::mouseDragged);
 	ofRemoveListener(ofEvents.keyPressed, this, &uWidget::keyPressed);
 	ofRemoveListener(ofEvents.keyReleased, this, &uWidget::keyReleased);
-
+	
 	ofRemoveListener(ofEvents.update, this, &uWidget::update);
 	ofRemoveListener(ofEvents.draw, this, &uWidget::draw);
 }

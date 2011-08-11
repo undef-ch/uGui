@@ -332,21 +332,23 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FAFFA45013F358E800150724</string>
+										<string>FAFFA69213F3788800150724</string>
 										<key>history</key>
 										<array>
 											<string>FAFFA23613F339B300150724</string>
 											<string>FAFFA28813F345E500150724</string>
 											<string>FAFFA2FF13F34A4200150724</string>
-											<string>FAFFA31413F34B5F00150724</string>
 											<string>FAFFA32113F34C4D00150724</string>
-											<string>FAFFA33613F34E1B00150724</string>
 											<string>FAFFA34F13F34EF900150724</string>
-											<string>FAFFA35013F34EF900150724</string>
-											<string>FAFFA36613F34FF900150724</string>
 											<string>FAFFA3FB13F3556F00150724</string>
 											<string>FAFFA3FD13F3556F00150724</string>
-											<string>FAFFA3FF13F3556F00150724</string>
+											<string>FAFFA52E13F3691E00150724</string>
+											<string>FAFFA54613F36A0800150724</string>
+											<string>FAFFA54813F36A0800150724</string>
+											<string>FAFFA55013F36A3700150724</string>
+											<string>FAFFA55113F36A3700150724</string>
+											<string>FAFFA58613F36E0400150724</string>
+											<string>FAFFA5DB13F370A300150724</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -544,6 +546,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>FAFFA69313F3788800150724</string>
 		<string>FAFFA24313F33A3500150724</string>
 		<string>FAFFA24413F33A3500150724</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -898,18 +901,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {650, 209}}</string>
+								<string>{{0, 0}, {417, 255}}</string>
 								<key>RubberWindowFrame</key>
-								<string>750 486 650 250 0 0 1440 878 </string>
+								<string>1034 499 417 296 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
 							<key>Proportion</key>
-							<string>209pt</string>
+							<string>255pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>209pt</string>
+					<string>255pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -929,7 +932,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>750 486 650 250 0 0 1440 878 </string>
+			<string>1034 499 417 296 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

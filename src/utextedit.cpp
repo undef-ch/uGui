@@ -1,11 +1,11 @@
 #include "ustyle.h"
 #include "utextedit.h"
 
-uTextEdit::uTextEdit():uWidget(),editing(false) {
+uTextEdit::uTextEdit():uWidget(),editing(false), selectFrom(0), selectTo(0), numLines(0), numCharsLastLine(0) {
 	setSize(300, 100);
 	font = uStyle::getFont();
-	setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
-	setText(getText()+" Und hier noch was dazu, damit es einen fehler gibt");
+	//setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
+	//setText(getText()+" Und hier noch was dazu, damit es einen fehler gibt");
 }
 
 uTextEdit::~uTextEdit() {
@@ -26,81 +26,125 @@ void uTextEdit::draw() {
 	ofPushMatrix();
 	ofTranslate(innerBounds.x, innerBounds.y);
 	
-	ofSetColor(styleCurrent.colorForeground);
-	font->drawString(text, 0, font->getSize());
-
-	if(!editing)
-		return;
-	blinkerCount++;
-	if(blinkerCount>20) {
-		showBlinker=!showBlinker;
-		blinkerCount=0;
+	//draw selection
+	if(editing){
+		ofSetColor(styleCurrent.colorSelection);
+		//ofRect(20, 20, 40, 40);
 	}
-	if(showBlinker) {
-		ofPoint blinkerPos;
-		blinkerPos.y = font->getStringBoundingBox(text, 0, 0).height;
-		
-		int brPos = text.find_last_of("\n");
-		if(brPos != -1)
-			blinkerPos.x = font->stringWidth(text.substr(brPos, text.size()-brPos))+2;
-		else
-			blinkerPos.x = font->stringWidth(text)+2;
-		
-		if(text.length()>1 && text[text.length()-1] == ' ')
-			blinkerPos.x += font->stringWidth("s");
-		ofRect(blinkerPos.x, blinkerPos.y-font->getSize()+3, 2, font->getSize()-3);
+	
+	//draw text
+	ofSetColor(styleCurrent.colorForeground);
+	font->drawString(textDisplay, 0, font->getSize());
+	
+	if(editing){
+		blinkerCount++;
+		if(blinkerCount>20) {
+			showBlinker=!showBlinker;
+			blinkerCount=0;
+		}
+		if(showBlinker) {
+			ofPoint blinkerPos(0,0);
+			blinkerPos.y = numLines * font->getLineHeight();
+			if (numCharsLastLine<=textDisplay.size()){
+				string tText=textDisplay;
+				blinkerPos.x = font->stringWidth(tText.substr(tText.size() - numCharsLastLine, numCharsLastLine));
+			}
+			//FIX FOR MISSING POSITION UPDATE WHEN LAST CHAR
+			int pos = 0;
+			while(textDisplay.size()>pos && textDisplay[textDisplay.size()-pos-1] == ' '){
+				pos++;
+			}
+			blinkerPos.x += pos*font->stringWidth("-");
+			
+			ofSetColor(styleCurrent.colorForeground);
+			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());
+		}
 	}
 	ofPopMatrix();
 }
 
-void uTextEdit::keyPressed(int key) {
+void uTextEdit::keyPressed(int key, uModifierKeysList mod) {
 	if(!editing)
 		return;
-	if(key == OF_KEY_BACKSPACE) {
-		text = text.substr(0, text.length() - 1);
-	}else if(key == OF_KEY_RETURN){
-		text += "\n";
-	}else{
-		text += char(key);
+	switch(key){
+			
+		case OF_KEY_BACKSPACE:
+			if(mod.contains(OF_KEY_ALT))
+				cout << "ALT PRESSED" << endl; //Doesn't work, no signal on alt key from of
+			text = text.substr(0, text.length() - 1);
+			break;
+			
+		case OF_KEY_RETURN:
+			text += "\n";
+			break;
+			
+		default:
+			text += char(key);
 	}
+	
 	updateLineBreaks();
 }
 
 void uTextEdit::updateLineBreaks(){
 	//update line breaks
+	textDisplay.clear();
 	ofRectangle bounds = font->getStringBoundingBox(text, 0, 0);
 	if(bounds.width > innerBounds.width){
 		//too big, do automatic line breaking
 		vector<string> words = ofSplitString(text, " ", true, true);
-		vector<string>::iterator it = words.begin();
-		string curStr;
+		
 		int curPos=0;
 		int curW=0;
 		int spaceWidth = font->stringWidth("_");
-		text.clear();
+		
+		string curStr;
+		vector<string>::iterator it = words.begin();
 		while (it != words.end()) {
 			curStr = (*it);
 			
+			//TODO: this is not really good yet, has to check further back for a '\n'
 			if(curStr.size() > 1 && curStr[curStr.size()-1] == '\n'){
 				curW = 0;
 			}
 			
 			int strW = font->stringWidth(curStr);
 			if (curW+strW > innerBounds.width) {
-				text += "\n";
+				textDisplay += "\n";
 				curW = 0;
 			}
-			text += curStr + " ";
+			++it;
+			textDisplay += curStr;
+			if(it != words.end()) textDisplay += " ";
 			curW += strW;
 			curW += spaceWidth;
 			curPos += curStr.size()+1;
-			++it;
+			
 		}
+	}else{
+		textDisplay = text;
 	}
+	
+	//Number of lines
+	std::string str = textDisplay;
+	if (str.find("\n") != string::npos) {
+		//find number of lines
+		numLines = 0;
+		int lastOcurence = 0;
+		while(str.find("\n") != string::npos) {
+			size_t pos = str.find("\n");
+			lastOcurence = pos;
+			str.replace(pos, 1, "", 0, 0);
+			numLines++;
+		}
+		numCharsLastLine = text.size() - lastOcurence+numLines;
+	}else{
+		numCharsLastLine = text.size();
+	}
+	
 }
 
 void uTextEdit::mousePressed(int x, int y, int button) {
-
+	selectFrom = selectTo = -1;
 }
 
 void uTextEdit::mouseReleased(int x, int y, int button) {
