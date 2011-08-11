@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="exampleMac" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="src/main.cpp"/>
+    <File Name="src/exampleApp.cpp"/>
+    <File Name="src/exampleApp.h"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <VirtualDirectory Name="osx">
+    <File Name="Info.plist"/>
+    <File Name="emptyExample.icns"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="uGui">
+    <File Name="../.gitignore"/>
+    <File Name="../README"/>
+    <File Name="../src/uGui.h"/>
+    <File Name="../src/ustyle.cpp"/>
+    <File Name="../src/ustyle.h"/>
+    <File Name="../src/utextedit.cpp"/>
+    <File Name="../src/utextedit.h"/>
+    <File Name="../src/uutils.h"/>
+    <File Name="../src/uwidget.cpp"/>
+    <File Name="../src/uwidget.h"/>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options=" -m32 -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -framework AGL" C_Options="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../../../libs/openFrameworks"/>
+        <IncludePath Value="../../../libs/openFrameworks/3d"/>
+        <IncludePath Value="../../../libs/openFrameworks/app"/>
+        <IncludePath Value="../../../libs/openFrameworks/communication"/>
+        <IncludePath Value="../../../libs/openFrameworks/events"/>
+        <IncludePath Value="../../../libs/openFrameworks/gl"/>
+        <IncludePath Value="../../../libs/openFrameworks/graphics"/>
+        <IncludePath Value="../../../libs/openFrameworks/math"/>
+        <IncludePath Value="../../../libs/openFrameworks/sound"/>
+        <IncludePath Value="../../../libs/openFrameworks/types"/>
+        <IncludePath Value="../../../libs/openFrameworks/utils"/>
+        <IncludePath Value="../../../libs/openFrameworks/video"/>
+        <IncludePath Value="../../../libs/freetype/include"/>
+        <IncludePath Value="../../../freetype/include/freetype2"/>
+        <IncludePath Value="../../../libs/poco/include"/>
+        <IncludePath Value="../../../libs/assimp/include"/>
+        <IncludePath Value="../../../libs/fmodex/include"/>
+        <IncludePath Value="../../../libs/FreeImage/include"/>
+        <IncludePath Value="../../../libs/kiss/include"/>
+        <IncludePath Value="../../../libs/tess2/include"/>
+        <IncludePath Value="../../../libs/cairo/include"/>
+        <IncludePath Value="../../../libs/cairo/include/cairo"/>
+      </Compiler>
+      <Linker Options="-m32; -F../../../libs/glut/lib/osx; -framework GLUT; -framework OpenGL; -framework QuickTime; -framework ApplicationServices; -framework Carbon; ../../../libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a; ../../../libs/poco/lib/osx/PocoNet.a; ../../../libs/poco/lib/osx/PocoFoundation.a; ../../../libs/poco/lib/osx/PocoUtil.a; ../../../libs/poco/lib/osx/PocoXML.a; ../../../libs/freetype/lib/osx/freetype.a; ../../../libs/glew/lib/osx/glew.a; ../../../libs/FreeImage/lib/osx/freeimage.a; ../../../libs/cairo/lib/osx/cairo.a; ../../../libs/cairo/lib/osx/pixman-1.a; ../../../libs/fmodex/lib/osx/libfmodex.dylib"/>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="-g " Required="yes" PreCompiledHeader="">
+        <IncludePath Value="../src"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="./bin/$(ProjectName).app/Contents/MacOS/$(ProjectName)" IntermediateDirectory="./debug" Command="./$(ProjectName).app/Contents/MacOS/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="./bin" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild>
+        <Command Enabled="yes">cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib "./bin/$(ProjectName).app/Contents/MacOS/libfmodex.dylib"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib "./bin/$(ProjectName).app/Contents/MacOS/$(ProjectName)";</Command>
+        <Command Enabled="yes">mkdir -p "./bin/$(ProjectName).app/Contents/Frameworks"</Command>
+        <Command Enabled="yes">cp -f -r ../../../libs/glut/lib/osx/GLUT.framework "./bin/$(ProjectName).app/Contents/Frameworks/"</Command>
+        <Command Enabled="yes">/Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks ../../../libs/glut/lib/osx/GLUT.framework ./bin/$(ProjectName).app/Contents/Frameworks/</Command>
+      </PostBuild>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild>./bin/$(ProjectName).app/Contents/Info.plist ./bin/$(ProjectName).app/Contents/Resources/emptyExample.icns
+## rule to copy the Info.plist file into the bundle
+./bin/$(ProjectName).app/Contents/Info.plist: Info.plist
+	mkdir -p './bin/$(ProjectName).app/Contents' &amp;&amp; cp -f Info.plist './bin/$(ProjectName).app/Contents/Info.plist'
+## rule to copy the icon file into the bundle
+./bin/$(ProjectName).app/Contents/Resources/emptyExample.icns: emptyExample.icns
+	mkdir -p './bin/$(ProjectName).app/Contents/Resources/' &amp;&amp; cp -f emptyExample.icns './bin/$(ProjectName).app/Contents/Resources/emptyExample.icns'
+</CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu gcc" DebuggerType="GNU gdb debugger" Type="" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="" Required="yes" PreCompiledHeader="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="-O2" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName).app/Contents/MacOS/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName).app/Contents/MacOS/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild>$(IntermediateDirectory)/$(ProjectName).app/Contents/Info.plist $(IntermediateDirectory)/$(ProjectName).app/Contents/Resources/emptyExample.icns
+## rule to copy the Info.plist file into the bundle
+$(IntermediateDirectory)/$(ProjectName).app/Contents/Info.plist: Info.plist
+	mkdir -p '$(IntermediateDirectory)/$(ProjectName).app/Contents' &amp;&amp; cp -f Info.plist '$(IntermediateDirectory)/$(ProjectName).app/Contents/Info.plist'
+## rule to copy the icon file into the bundle
+$(IntermediateDirectory)/$(ProjectName).app/Contents/Resources/emptyExample.icns: emptyExample.icns
+	mkdir -p '$(IntermediateDirectory)/$(ProjectName).app/Contents/Resources/' &amp;&amp; cp -f emptyExample.icns '$(IntermediateDirectory)/$(ProjectName).app/Contents/Resources/emptyExample.icns'</CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

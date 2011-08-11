@@ -51,6 +51,7 @@ void uTextEdit::draw() {
 			blinkerCount=0;
 		}
 		if(showBlinker) {
+			//get position of cursor
 			ofPoint blinkerPos(0,0);
 			blinkerPos.y = numLines * font->getLineHeight();
 			if (numCharsLastLine<=textDisplay.size()){

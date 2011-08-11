@@ -3,38 +3,7 @@
 
 #include "ofMain.h"
 #include "ustyle.h" 
-
-template <class type>
-class uList{
-public:
-	void add(type key){
-		//cout << "ADD KEY" << endl;
-		if(!contains(key))
-			keys.push_back(key);
-	}
-	
-	void remove(type key){
-		if(!contains(key))
-			return;
-		keys.erase(std::find(keys.begin(), keys.end(), key));
-	}
-	
-	bool contains(type key){
-		//cout << "check contains with :" << key << " alt is " << int(OF_KEY_ALT) << " IS SAME " << 
-		//(std::find(keys.begin(), keys.end(), key) != keys.end()) << endl;
-		return std::find(keys.begin(), keys.end(), key) != keys.end();
-	}
-	
-private:
-	std::vector<type> keys;
-};
-
-typedef uList<int> uModifierKeysList;
-
-class uWidget;
-
-typedef ofPtr<uWidget> uWidgetPtr;
-typedef std::vector<uWidgetPtr> uWidgetList;
+#include "uutils.h"
 
 class uWidget: protected ofRectangle{
 
