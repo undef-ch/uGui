@@ -1,7 +1,7 @@
 #include "ustyle.h"
 #include "utextedit.h"
 
-uTextEdit::uTextEdit():uWidget(),editing(false), selectFrom(0), selectTo(0), numLines(0), numCharsLastLine(0) {
+uTextEdit::uTextEdit():uWidget(),editing(false), selectFrom(0), selectTo(0), numLines(0), numCharsLastLine(0), isSingleline(false) {
 	setSize(300, 100);
 	font = uStyle::getFont();
 	//setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
@@ -54,7 +54,7 @@ void uTextEdit::draw() {
 			while(textDisplay.size()>pos && textDisplay[textDisplay.size()-pos-1] == ' '){
 				pos++;
 			}
-			//blinkerPos.x += pos*font->stringWidth("-");
+			blinkerPos.x += pos*font->stringWidth("-");
 			
 			ofSetColor(styleCurrent.colorForeground);
 			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());
@@ -77,7 +77,10 @@ void uTextEdit::keyPressed(int key, uModifierKeysList mod) {
 		case OF_KEY_RETURN:
 			text += "\n";
 			break;
-			
+		case '\n':
+			if(!isSingleline)
+				text += key;
+			break;
 		default:
 			text += char(key);
 	}
@@ -89,7 +92,7 @@ void uTextEdit::updateLineBreaks(){
 	//update line breaks
 	textDisplay.clear();
 	ofRectangle bounds = font->getStringBoundingBox(text, 0, 0);
-	if(bounds.width > innerBounds.width){
+	if(bounds.width > innerBounds.width && !isSingleline){
 		//too big, do automatic line breaking
 		vector<string> words = ofSplitString(text, " ", true, true);
 		
@@ -149,6 +152,10 @@ void uTextEdit::updateLineBreaks(){
 		numCharsLastLine = text.size();
 	}
 	
+}
+
+void uTextEdit::setSingleline(bool s){
+	isSingleline = s;
 }
 
 void uTextEdit::mousePressed(int x, int y, int button) {

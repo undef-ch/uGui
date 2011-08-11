@@ -16,6 +16,7 @@ public:
 	void mousePressed(int x, int y, int button);
 	void mouseReleased(int x, int y, int button);
 	void keyPressed(int key, uModifierKeysList mod);
+	void setSingleline(bool singleline);
 	
 private:
 	void updateLineBreaks();
@@ -30,6 +31,7 @@ private:
 	int selectTo;
 	int numLines;
 	int numCharsLastLine;
+	bool isSingleline;
 };
 
 #endif // UTEXTEDIT_H
