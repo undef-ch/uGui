@@ -54,7 +54,7 @@ void uTextEdit::draw() {
 			while(textDisplay.size()>pos && textDisplay[textDisplay.size()-pos-1] == ' '){
 				pos++;
 			}
-			blinkerPos.x += pos*font->stringWidth("-");
+			//blinkerPos.x += pos*font->stringWidth("-");
 			
 			ofSetColor(styleCurrent.colorForeground);
 			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());
@@ -102,7 +102,12 @@ void uTextEdit::updateLineBreaks(){
 		while (it != words.end()) {
 			curStr = (*it);
 			
-			std::vector<string> lineSplit = ofSplitString(curStr, "\n", true, true);
+			std::vector<string> lineSplit;
+			if(curStr.size()>0)
+				lineSplit = ofSplitString(curStr, "\n", true, true);
+			else
+				lineSplit.push_back(curStr);
+
 			std::vector<string>::iterator sIt = lineSplit.begin();
 
 			while(sIt != lineSplit.end()){
