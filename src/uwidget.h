@@ -68,12 +68,17 @@ public:
 	void setUnfocused();
 	
 	uWidget* getUltimateParent();
-
+	
+	int mouseX;
+	int mouseY;
+	
 protected:
 	ofRectangle innerBounds;
 	static uFocusHandler focusHandler ;
 	
 private:
+	void updateMouseEvent(ofMouseEventArgs& e);
+	
 	static void initStatic();
 	
 	uWidget* parent;

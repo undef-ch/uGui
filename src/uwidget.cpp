@@ -9,7 +9,7 @@ void uWidget::initStatic(){
 		isInitStatic = true;
 	}
 }
-uWidget::uWidget():
+uWidget::uWidget():uFocus(),
 registeredToOf(false), styleDefault(uStyle::getDefault()), styleFocus(uStyle::getFocus()), styleTrigger(uStyle::getTrigger())
 {
 	styleCurrent=styleDefault;
@@ -77,13 +77,15 @@ void uWidget::keyReleased(ofKeyEventArgs& e) {
 	keyReleased(e.key);
 }
 
+void uWidget::updateMouseEvent(ofMouseEventArgs& e){
+	e.x -= x;
+	e.y -= y;
+}
+
 void uWidget::mouseDragged(ofMouseEventArgs& e) {
-	if(registeredToOf){
-		e.x-=x;
-		e.y-=y;
-	}
+	updateMouseEvent(e);
+	ofPoint p = ofPoint(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mouseDragged(e);
@@ -94,12 +96,9 @@ void uWidget::mouseDragged(ofMouseEventArgs& e) {
 }
 
 void uWidget::mouseMoved(ofMouseEventArgs& e) {
-	if(registeredToOf){
-		e.x-=x;
-		e.y-=y;
-	}
+	updateMouseEvent(e);
+	ofPoint p = ofPoint(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mouseMoved(e);
@@ -110,12 +109,9 @@ void uWidget::mouseMoved(ofMouseEventArgs& e) {
 }
 
 void uWidget::mousePressed(ofMouseEventArgs& e) {
-	if(registeredToOf){
-		e.x-=x;
-		e.y-=y;
-	}
+	updateMouseEvent(e);
+	ofPoint p = ofPoint(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mousePressed(e);
@@ -126,12 +122,9 @@ void uWidget::mousePressed(ofMouseEventArgs& e) {
 }
 
 void uWidget::mouseReleased(ofMouseEventArgs& e) {
-	if(registeredToOf){
-		e.x-=x;
-		e.y-=y;
-	}
+	updateMouseEvent(e);
+	ofPoint p = ofPoint(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mouseReleased(e);
