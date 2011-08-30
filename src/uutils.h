@@ -50,11 +50,14 @@ typedef uList<int> uModifierKeysList;
 
 class uFocus{
 public:
+	uFocus():isFocused(false){};
 	virtual void onFocus(){};
 	virtual void onUnfocus(){};
 	
-	virtual void focus(){onFocus();};
-	virtual void unfocus(){onUnfocus();};
+	virtual void setFocused(){isFocused=true;onFocus();};
+	virtual void setUnfocused(){isFocused=false;onUnfocus();};
+	
+	bool isFocused;
 };
 
 class uFocusHandler{

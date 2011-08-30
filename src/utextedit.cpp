@@ -12,8 +12,8 @@ uTextEdit::uTextEdit(bool singleline):uWidget(),
 	else
 		setSize(300, 100);
 	
-	//setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
-	//setText(getText()+" Und hier noch was dazu, damit es einen fehler gibt");
+	setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
+	setText(getText()+" Und hier noch was dazu, damit es einen fehler gibt");
 }
 
 uTextEdit::~uTextEdit() {
@@ -51,6 +51,7 @@ void uTextEdit::draw() {
 			blinkerCount=0;
 		}
 		if(showBlinker) {
+			/*
 			//get position of cursor
 			ofPoint blinkerPos(0,0);
 			blinkerPos.y = numLines * font->getLineHeight();
@@ -66,8 +67,8 @@ void uTextEdit::draw() {
 			blinkerPos.x += pos*font->stringWidth("-");
 			
 			ofSetColor(styleCurrent.colorForeground);
-			ofFill();
-			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());
+			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());*/
+			
 		}
 	}
 	ofPopMatrix();
@@ -135,7 +136,6 @@ void uTextEdit::updateLineBreaks(){
 				curW += strW;
 				curW += spaceWidth;
 				curPos += curStr.size()+1;
-				
 			}
 		}
 	}else{
@@ -154,9 +154,9 @@ void uTextEdit::updateLineBreaks(){
 			str.replace(pos, 1, "", 0, 0);
 			numLines++;
 		}
-		numCharsLastLine = text.size() - lastOcurence + numLines;
+		//numCharsLastLine = text.size() - lastOcurence + numLines;
 	}else{
-		numCharsLastLine = text.size();
+		//numCharsLastLine = text.size();
 	}
 	
 }
@@ -166,8 +166,36 @@ void uTextEdit::setSingleline(bool s){
 }
 
 void uTextEdit::mousePressed(int x, int y, int button) {
-	selectFrom = selectTo = -1;
-	focus();
+	selectFrom = selectTo = -1; 
+	if(!isFocused){
+		setFocused();
+	}else{
+		int lineNumber = floorf((y-innerBounds.y)/font->getLineHeight());
+		if(lineNumber>numLines){
+			selectFrom = -1;
+			selectTo = -1;
+		}else{
+			std::vector<string> lines = ofSplitString(textDisplay, "\n");
+			string str = lines[lineNumber];
+			int curX = 0;
+			for(int i=0;i<str.size();i++){
+				char c = str[i];
+				if(c == ' '){
+					c = '-';
+				}
+				stringstream ss;
+				string s;
+				ss << c;
+				ss >> s;
+				int w = font->stringWidth(s);
+				if(w+curX>x-innerBounds.x){
+					cout << s << endl;
+					break;
+				}
+				curX+=w+font->getLetterSpacing();
+			}
+		}
+	}
 }
 
 void uTextEdit::mouseReleased(int x, int y, int button) {

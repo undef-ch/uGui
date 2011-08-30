@@ -86,6 +86,11 @@ void uWidget::keyReleased(ofKeyEventArgs& e) {
 	keyReleased(e.key);
 }
 
+void uWidget::updateMouseEvent(ofMouseEventArgs& e){
+	e.x -= x;
+	e.y -= y;
+}
+
 void uWidget::mouseDragged(ofMouseEventArgs& e) {
 	if(isDisabled)
 		return;
@@ -96,7 +101,6 @@ void uWidget::mouseDragged(ofMouseEventArgs& e) {
 		e.y-=y;
 	}
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mouseDragged(e);
@@ -116,7 +120,6 @@ void uWidget::mouseMoved(ofMouseEventArgs& e) {
 		e.y-=y;
 	}
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mouseMoved(e);
@@ -137,7 +140,6 @@ void uWidget::mousePressed(ofMouseEventArgs& e) {
 	}
 	isMouseDown = true;
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mousePressed(e);
@@ -158,7 +160,6 @@ void uWidget::mouseReleased(ofMouseEventArgs& e) {
 	}
 	isMouseDown = false;
 	uWidgetList::iterator it = children.begin();
-	ofPoint p(e.x, e.y);
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mouseReleased(e);

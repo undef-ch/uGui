@@ -73,8 +73,12 @@ public:
 	void enable();
 	
 	uWidget* getUltimateParent();
+
 	uWidgetEvents events;
 
+	int mouseX;
+	int mouseY;
+	
 protected:
 	ofRectangle innerBounds;
 	static uFocusHandler focusHandler ;
@@ -83,6 +87,8 @@ protected:
 	bool isDisabled;
 
 private:
+	void updateMouseEvent(ofMouseEventArgs& e);
+	
 	static void initStatic();
 	
 	uWidget* parent;
