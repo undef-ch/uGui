@@ -66,6 +66,7 @@ void uTextEdit::draw() {
 			blinkerPos.x += pos*font->stringWidth("-");
 			
 			ofSetColor(styleCurrent.colorForeground);
+			ofFill();
 			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());
 		}
 	}
@@ -166,7 +167,7 @@ void uTextEdit::setSingleline(bool s){
 
 void uTextEdit::mousePressed(int x, int y, int button) {
 	selectFrom = selectTo = -1;
-	setFocused();
+	focus();
 }
 
 void uTextEdit::mouseReleased(int x, int y, int button) {

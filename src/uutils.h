@@ -53,8 +53,8 @@ public:
 	virtual void onFocus(){};
 	virtual void onUnfocus(){};
 	
-	virtual void setFocused(){onFocus();};
-	virtual void setUnfocused(){onUnfocus();};
+	virtual void focus(){onFocus();};
+	virtual void unfocus(){onUnfocus();};
 };
 
 class uFocusHandler{
@@ -65,6 +65,22 @@ public:
 	bool hasFocused();
 private:
 	uFocus* focused;
+};
+
+class uWidgetEvent{
+public:
+	uWidgetEvent(uWidget* w){widget = w;}
+	uWidget* widget;
+};
+
+class uWidgetEvents{
+public:
+	ofEvent<uWidgetEvent> resize;
+	ofEvent<uWidgetEvent> move;
+	ofEvent<uWidgetEvent> show;
+	ofEvent<uWidgetEvent> hide;
+	ofEvent<uWidgetEvent> childAdd;
+	ofEvent<uWidgetEvent> childRemove;
 };
 
 #endif

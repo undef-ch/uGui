@@ -55,7 +55,9 @@ public:
 	
 	void setPosition(float x, float y);
 	ofPoint getPosition();
-	
+
+	void hide();
+	void show();
 	
 	void drawBackground();
 	
@@ -64,15 +66,22 @@ public:
 	uStyle styleTrigger;
 	uStyle styleCurrent;
 	
-	void setFocused();
-	void setUnfocused();
+	void focus();
+	void unfocus();
+
+	void disable();
+	void enable();
 	
 	uWidget* getUltimateParent();
+	uWidgetEvents events;
 
 protected:
 	ofRectangle innerBounds;
 	static uFocusHandler focusHandler ;
-	
+	bool isMouseDown;
+	bool isHidden;
+	bool isDisabled;
+
 private:
 	static void initStatic();
 	
@@ -83,9 +92,8 @@ private:
 		
 	uWidgetList children;
 	bool registeredToOf;
-	
+
 	static bool isInitStatic;
-	
 };
 
 #endif // UWIDGET_H
