@@ -100,6 +100,7 @@ void uWidget::mouseDragged(ofMouseEventArgs& e) {
 		e.x-=x;
 		e.y-=y;
 	}
+	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
@@ -119,6 +120,7 @@ void uWidget::mouseMoved(ofMouseEventArgs& e) {
 		e.x-=x;
 		e.y-=y;
 	}
+	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
@@ -139,6 +141,7 @@ void uWidget::mousePressed(ofMouseEventArgs& e) {
 		e.y-=y;
 	}
 	isMouseDown = true;
+	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
@@ -159,6 +162,7 @@ void uWidget::mouseReleased(ofMouseEventArgs& e) {
 		e.y-=y;
 	}
 	isMouseDown = false;
+	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
 		if((*it)->inside(p)){

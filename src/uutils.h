@@ -54,8 +54,8 @@ public:
 	virtual void onFocus(){};
 	virtual void onUnfocus(){};
 	
-	virtual void setFocused(){isFocused=true;onFocus();};
-	virtual void setUnfocused(){isFocused=false;onUnfocus();};
+	virtual void focus(){isFocused=true;onFocus();};
+	virtual void unfocus(){isFocused=false;onUnfocus();};
 	
 	bool isFocused;
 };

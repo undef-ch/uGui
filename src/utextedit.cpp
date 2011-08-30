@@ -51,7 +51,7 @@ void uTextEdit::draw() {
 			blinkerCount=0;
 		}
 		if(showBlinker) {
-			/*
+
 			//get position of cursor
 			ofPoint blinkerPos(0,0);
 			blinkerPos.y = numLines * font->getLineHeight();
@@ -67,7 +67,7 @@ void uTextEdit::draw() {
 			blinkerPos.x += pos*font->stringWidth("-");
 			
 			ofSetColor(styleCurrent.colorForeground);
-			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());*/
+			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());
 			
 		}
 	}
@@ -168,7 +168,7 @@ void uTextEdit::setSingleline(bool s){
 void uTextEdit::mousePressed(int x, int y, int button) {
 	selectFrom = selectTo = -1; 
 	if(!isFocused){
-		setFocused();
+		focus();
 	}else{
 		int lineNumber = floorf((y-innerBounds.y)/font->getLineHeight());
 		if(lineNumber>numLines){

@@ -16,3 +16,7 @@ void uLayout::setWidget(uWidget* w)
 	ofAddListener(widget->events.childAdd, this, &uLayout::onWidgetEvent);
 	ofAddListener(widget->events.childRemove, this, &uLayout::onWidgetEvent);
 }
+
+void uLayout::onWidgetEvent(uWidgetEvent& e)
+{
+}
