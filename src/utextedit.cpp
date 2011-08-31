@@ -2,73 +2,54 @@
 #include "utextedit.h"
 
 uTextEdit::uTextEdit(bool singleline):uWidget(),
-	editing(false), selectFrom(0), selectTo(0), 
-	numLines(0), numCharsLastLine(0), isSingleline(false) 
-{
+	editing(false), selectFrom(0), selectTo(0),
+	numLines(0), numCharsLastLine(0), isSingleline(false) {
 	font = uStyle::getFont();
 	setSingleline(singleline);
 	if(isSingleline)
 		setSize(300, font->getLineHeight()+styleCurrent.padding.top+styleCurrent.padding.bottom);
 	else
 		setSize(300, 100);
-	
-	setText("das hier ist ein viel zu langer text, viel zu lang, so dermassen lang! das hier ist ein viel zu langer text, viel zu lang, so dermassen lang");
-	setText(getText()+" Und hier noch was dazu, damit es einen fehler gibt");
 }
 
 uTextEdit::~uTextEdit() {
 }
 
-void uTextEdit::setText(string t){
+void uTextEdit::setText(string t) {
 	text = t;
 	updateLineBreaks();
 }
 
-string uTextEdit::getText(){
+string uTextEdit::getText() {
 	return text;
 }
 
 void uTextEdit::draw() {
 	drawBackground();
-	
+
 	ofPushMatrix();
 	ofTranslate(innerBounds.x, innerBounds.y);
-	
+
 	//draw selection
-	if(editing){
+	if(editing) {
 		ofSetColor(styleCurrent.colorSelection);
-		//ofRect(20, 20, 40, 40);
 	}
-	
+
 	//draw text
 	ofSetColor(styleCurrent.colorForeground);
 	font->drawString(textDisplay, 0, font->getSize());
-	
-	if(editing){
-		blinkerCount++;
-		if(blinkerCount>20) {
+
+	if(editing) {
+		cursorBlinkCount++;
+		if(cursorBlinkCount>20) {
 			showBlinker=!showBlinker;
-			blinkerCount=0;
+			cursorBlinkCount=0;
 		}
 		if(showBlinker) {
-
-			//get position of cursor
-			ofPoint blinkerPos(0,0);
-			blinkerPos.y = numLines * font->getLineHeight();
-			if (numCharsLastLine<=textDisplay.size()){
-				string tText=textDisplay;
-				blinkerPos.x = font->stringWidth(tText.substr(tText.size() - numCharsLastLine, numCharsLastLine));
-			}
-			//FIX FOR MISSING POSITION UPDATE WHEN LAST CHAR IS SPACE
-			int pos = 0;
-			while(textDisplay.size()>pos && textDisplay[textDisplay.size()-pos-1] == ' '){
-				pos++;
-			}
-			blinkerPos.x += pos*font->stringWidth("-");
-			
+			ofFill();
 			ofSetColor(styleCurrent.colorForeground);
-			ofRect(blinkerPos.x, blinkerPos.y, 3, font->getSize());
-			
+			ofPoint tP = getPosOfCharAt(selectFrom);
+			ofRect(tP.x, tP.y-font->getLineHeight(), 2, font->getSize());
 		}
 	}
 	ofPopMatrix();
@@ -77,42 +58,77 @@ void uTextEdit::draw() {
 void uTextEdit::keyPressed(int key, uModifierKeysList mod) {
 	if(!editing)
 		return;
-	switch(key){
-			
-		case OF_KEY_BACKSPACE:
-			if(mod.contains(OF_KEY_ALT))
-				cout << "ALT PRESSED" << endl; //Doesn't work, no signal on alt key from of
-			text = text.substr(0, text.length() - 1);
+	switch(key) {
+
+	case OF_KEY_BACKSPACE:
+		if(selectFrom <= 0)
 			break;
-			
-		case OF_KEY_RETURN:
-			if(!isSingleline)
-				text += "\n";
+
+		if(mod.contains(OF_KEY_ALT))
+			cout << "ALT PRESSED" << endl; //Doesn't work, no signal on alt key from of
+		text.erase(displayToTextPos(selectFrom), 1);
+		selectFrom--;
+		break;
+
+	case OF_KEY_DEL:
+		if(selectFrom >= textDisplay.size())
 			break;
-		default:
-			text += char(key);
+
+		if(mod.contains(OF_KEY_ALT))
+			cout << "ALT PRESSED" << endl; //Doesn't work, no signal on alt key from of
+		text.erase(displayToTextPos(selectFrom+1), 1);
+		break;
+
+	case OF_KEY_RETURN:
+		ofLog(OF_LOG_WARNING, "sorry, manual line breaks are not yet supported");
+		break;
+		if(!isSingleline)
+			text += "\n";
+		break;
+	case OF_KEY_LEFT:
+		selectFrom--;
+		break;
+	case OF_KEY_RIGHT:
+		selectFrom++;
+		break;
+	case OF_KEY_UP:
+		break;
+	case OF_KEY_DOWN:
+		break;
+	default:
+		if(text.size()==0) {
+			text+= char(key);
+			selectFrom = 1;
+		}else{
+			text.insert(displayToTextPos(selectFrom)+1, 1, char(key));
+			selectFrom++;
+		}
+
+		break;
 	}
-	
+
 	updateLineBreaks();
 }
 
-void uTextEdit::updateLineBreaks(){
+void uTextEdit::updateLineBreaks() {
 	//update line breaks
 	textDisplay.clear();
 	ofRectangle bounds = font->getStringBoundingBox(text, 0, 0);
-	if(bounds.width > innerBounds.width && !isSingleline){
+	int breaksBefore = ofSplitString(textDisplay, "\n").size()-1;
+	int breaksNow =0;
+	if(bounds.width > innerBounds.width && !isSingleline) {
 		//too big, do automatic line breaking
 		vector<string> words = ofSplitString(text, " ", true, true);
-		
+
 		int curPos=0;
 		int curW=0;
 		int spaceWidth = font->stringWidth("_");
-		
+
 		string curStr;
 		vector<string>::iterator it = words.begin();
 		while (it != words.end()) {
 			curStr = (*it);
-			
+
 			std::vector<string> lineSplit;
 			if(curStr.size()>0)
 				lineSplit = ofSplitString(curStr, "\n", true, true);
@@ -121,14 +137,14 @@ void uTextEdit::updateLineBreaks(){
 
 			std::vector<string>::iterator sIt = lineSplit.begin();
 
-			while(sIt != lineSplit.end()){
+			while(sIt != lineSplit.end()) {
 				curStr = *sIt;
-				++it;
 				++sIt;
-				
+
 				int strW = font->stringWidth(curStr);
 				if (curW+strW > innerBounds.width || sIt != lineSplit.end()) {
 					textDisplay += "\n";
+					breaksNow++;
 					curW = 0;
 				}
 				textDisplay += curStr;
@@ -137,11 +153,12 @@ void uTextEdit::updateLineBreaks(){
 				curW += spaceWidth;
 				curPos += curStr.size()+1;
 			}
+			++it;
 		}
-	}else{
+	} else {
 		textDisplay = text;
 	}
-	
+	selectFrom += breaksNow-breaksBefore;
 	//Number of lines
 	std::string str = textDisplay;
 	if (str.find("\n") != string::npos) {
@@ -155,32 +172,38 @@ void uTextEdit::updateLineBreaks(){
 			numLines++;
 		}
 		//numCharsLastLine = text.size() - lastOcurence + numLines;
-	}else{
+	} else {
 		//numCharsLastLine = text.size();
 	}
-	
+	checkSelectFromTo();
 }
 
-void uTextEdit::setSingleline(bool s){
+void uTextEdit::setSingleline(bool s) {
 	isSingleline = s;
 }
 
 void uTextEdit::mousePressed(int x, int y, int button) {
-	selectFrom = selectTo = -1; 
-	if(!isFocused){
+	selectFrom = selectTo = -1;
+
+	if(!isFocused) {
 		focus();
-	}else{
+	} else {
 		int lineNumber = floorf((y-innerBounds.y)/font->getLineHeight());
-		if(lineNumber>numLines){
-			selectFrom = -1;
+		if(lineNumber>numLines) {
+			selectFrom = textDisplay.size()-1;
 			selectTo = -1;
-		}else{
+		} else {
 			std::vector<string> lines = ofSplitString(textDisplay, "\n");
+			int curPos = 0;
+			for(int i=0; i<lineNumber; i++) {
+				curPos+=lines[i].size()+1;
+			}
 			string str = lines[lineNumber];
 			int curX = 0;
-			for(int i=0;i<str.size();i++){
+			for(int i=0; i<str.size(); i++) {
+				curPos++;
 				char c = str[i];
-				if(c == ' '){
+				if(c == ' ') {
 					c = '-';
 				}
 				stringstream ss;
@@ -188,29 +211,75 @@ void uTextEdit::mousePressed(int x, int y, int button) {
 				ss << c;
 				ss >> s;
 				int w = font->stringWidth(s);
-				if(w+curX>x-innerBounds.x){
-					cout << s << endl;
+				if(w+curX>x-innerBounds.x) {
+					selectFrom = curPos;
 					break;
 				}
 				curX+=w+font->getLetterSpacing();
+				if(i==str.size()-1)
+					selectFrom = textDisplay.size()-1;
 			}
 		}
 	}
+	checkSelectFromTo();
 }
 
 void uTextEdit::mouseReleased(int x, int y, int button) {
-	
+
 }
 
-void uTextEdit::onFocus()
-{
-	blinkerCount = 0;
+void uTextEdit::onFocus() {
+	cursorBlinkCount = 0;
 	editing = true;
 	showBlinker = true;
 }
 
-void uTextEdit::onUnfocus()
-{
+void uTextEdit::onUnfocus() {
 	editing = false;
 }
 
+ofPoint uTextEdit::getPosOfCharAt(int pos) {
+	if(pos<0)
+		pos=0;
+	if(pos>=textDisplay.size())
+		pos = textDisplay.size();
+	ofPoint ret;
+	string strToPos = textDisplay.substr(0, pos);
+	std::vector<string> lines = ofSplitString(strToPos, "\n");
+	ret.y = lines.size() * font->getLineHeight();
+	string lastLine = lines[lines.size()-1];
+
+	for(int i=lastLine.size()-1; i>=0; i--) {
+		if(lastLine[i]==' ')
+			lastLine[i] = '-';
+		else
+			break;
+	}
+
+	for(int i=0; i<lastLine.size(); i++) {
+		if(lastLine[i]==' ')
+			lastLine[i] = '-';
+		else
+			break;
+	}
+
+	ret.x = font->stringWidth(lastLine);
+	return ret;
+}
+
+int uTextEdit::displayToTextPos(int pos) {
+	string strToPos = textDisplay.substr(0, pos);
+	int p = pos - ofSplitString(strToPos, "\n").size();
+	if(p>=text.size())
+		p = text.size()-1;
+	if(p<0)
+		p=0;
+	return p;
+}
+
+void uTextEdit::checkSelectFromTo() {
+	if(selectFrom>textDisplay.size())
+		selectFrom = textDisplay.size();
+	if(selectFrom<0)
+		selectFrom=0;
+}

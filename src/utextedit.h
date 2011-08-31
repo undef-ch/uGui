@@ -17,18 +17,22 @@ public:
 	void mouseReleased(int x, int y, int button);
 	void keyPressed(int key, uModifierKeysList mod);
 	void setSingleline(bool singleline);
-	
+
 	void onFocus();
 	void onUnfocus();
 	
 private:
+	ofPoint getPosOfCharAt(int pos);
+	int displayToTextPos(int pos);
 	void updateLineBreaks();
+	void checkSelectFromTo();
 	
 	bool editing;
 	string text;
 	string textDisplay;
-	int blinkerCount;
+	int cursorBlinkCount;
 	bool showBlinker;
+	ofPoint cursorPos;
 	ofTrueTypeFont* font;
 	int selectFrom;
 	int selectTo;

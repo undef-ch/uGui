@@ -13,7 +13,7 @@ uWidget::uWidget():
 registeredToOf(false), styleDefault(uStyle::getDefault()), styleFocus(uStyle::getFocus()), styleTrigger(uStyle::getTrigger()), isMouseDown(false), isHidden(false), isDisabled(false)
 {
 	styleCurrent=styleDefault;
-	setSize(100, 100);
+	setSize(0, 0);
 	modifierKeysListenTo.add(OF_KEY_MODIFIER);
 	modifierKeysListenTo.add(OF_KEY_ALT);
 	modifierKeysListenTo.add(OF_KEY_SHIFT);
@@ -95,11 +95,10 @@ void uWidget::mouseDragged(ofMouseEventArgs& e) {
 	if(isDisabled)
 		return;
 	if(registeredToOf){
-		if(!inside(e.x, e.y))
+		if(!inside(e.x, e.y) && getSize().x != 0 && getSize().y != 0)
 			return;
-		e.x-=x;
-		e.y-=y;
 	}
+	updateMouseEvent(e);
 	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
@@ -115,11 +114,10 @@ void uWidget::mouseMoved(ofMouseEventArgs& e) {
 	if(isDisabled)
 		return;
 	if(registeredToOf){
-		if(!inside(e.x, e.y))
+		if(!inside(e.x, e.y) && getSize().x != 0 && getSize().y != 0)
 			return;
-		e.x-=x;
-		e.y-=y;
 	}
+	updateMouseEvent(e);
 	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
@@ -135,18 +133,17 @@ void uWidget::mousePressed(ofMouseEventArgs& e) {
 	if(isDisabled)
 		return;
 	if(registeredToOf){
-		if(!inside(e.x, e.y))
+		if(!inside(e.x, e.y) && getSize().x != 0 && getSize().y != 0)
 			return;
-		e.x-=x;
-		e.y-=y;
 	}
+	updateMouseEvent(e);
 	isMouseDown = true;
 	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
 	while(it!=children.end()) {
 		if((*it)->inside(p)){
 			(*it)->mousePressed(e);
-		};
+		}
 		++it;
 	}
 	mousePressed(e.x, e.y, e.button);
@@ -157,10 +154,7 @@ void uWidget::mouseReleased(ofMouseEventArgs& e) {
 		return;
 	if(!isMouseDown)
 		return;
-	if(registeredToOf){
-		e.x-=x;
-		e.y-=y;
-	}
+	updateMouseEvent(e);
 	isMouseDown = false;
 	ofPoint p(e.x, e.y);
 	uWidgetList::iterator it = children.begin();
